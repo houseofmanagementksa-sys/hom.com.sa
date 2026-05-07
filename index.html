@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="lang-en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Management — Innovative Solutions Provider | Madinah, KSA</title>
+    <meta name="description"
+        content="House of Management (HOM) — A world-class solution provider specializing in Hotel Consultancy, IT Systems, Feasibility Studies, and Corporate Branding. Based in Madinah, Saudi Arabia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/globe.gl"></script>
+</head>
+
+<body>
+
+    <!-- LAYER 1 — Announcement Ticker Bar -->
+    <div class="ann-bar" id="annBar">
+        <div class="ann-bar-live">
+            <span class="ann-live-dot"></span>
+            <span class="ann-live-label">LIVE</span>
+        </div>
+        <div class="ann-ticker-viewport">
+            <div class="ann-ticker-track" id="annTickerTrack">
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-new">NEW</span>
+                    HOM launches Hotel Pre-Opening services for 3 new properties in Madinah Munawwara
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-award">AWARD</span>
+                    HOM ranked Top Management Consultancy — KSA Hospitality Summit 2024
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-partner">PARTNER</span>
+                    New strategic partnership signed with Dyar Hotels &amp; Resorts
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-hire">HIRING</span>
+                    HOM is expanding — Senior Hotel Consultant positions now open in Madinah
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <!-- Duplicate for seamless loop -->
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-new">NEW</span>
+                    HOM launches Hotel Pre-Opening services for 3 new properties in Madinah Munawwara
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-award">AWARD</span>
+                    HOM ranked Top Management Consultancy — KSA Hospitality Summit 2024
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-partner">PARTNER</span>
+                    New strategic partnership signed with Dyar Hotels &amp; Resorts
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-hire">HIRING</span>
+                    HOM is expanding — Senior Hotel Consultant positions now open in Madinah
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+            </div>
+        </div>
+        <button class="ann-bar-close" id="annBarClose" aria-label="Close announcement bar">&#x2715;</button>
+    </div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-brand">
+                <div class="nav-logo-wrap">
+                    <img src="images/hom_official_logo-removebg-preview.png" alt="House of Management Logo"
+                        class="nav-logo-img">
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#quality">Quality</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="index-ar.html" class="lang-toggle" aria-label="Switch to Arabic">العربية</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#industries">Industries</a>
+            <a href="#services">Services</a>
+            <a href="#quality">Quality</a>
+            <a href="#clients">Clients</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+
+            <!-- Background Slides -->
+            <div class="hero-slides" id="heroSlides">
+
+                <!-- Slide 1: Hotel & Hospitality -->
+                <div class="hero-slide active" style="background-image:url('images/hero_slide_hotel.png')">
+                    <div class="slide-overlay"></div>
+                </div>
+
+                <!-- Slide 2: Madinah City -->
+                <div class="hero-slide" style="background-image:url('images/hero_slide_madinah.png')">
+                    <div class="slide-overlay"></div>
+                </div>
+
+                <!-- Slide 3: Corporate Boardroom -->
+                <div class="hero-slide" style="background-image:url('images/hero_slide_business.png')">
+                    <div class="slide-overlay"></div>
+                </div>
+
+                <!-- Slide 4: City Skyline -->
+                <div class="hero-slide" style="background-image:url('images/hero_slide_skyline.png')">
+                    <div class="slide-overlay"></div>
+                </div>
+            </div>
+
+            <!-- Particle canvas on top of slides -->
+            <canvas id="bg-canvas"></canvas>
+
+            <!-- Slide Content — changes per slide -->
+            <div class="hero-content">
+                <div class="hero-slide-content active" data-slide="0">
+                    <div class="hero-badge">Hotel &amp; Hospitality Consultancy</div>
+                    <h1 class="hero-title">World-Class <span class="gold">Hotel Solutions</span><br>From Madinah</h1>
+                    <p class="hero-sub">Pre-opening services, business planning, and hotel operations — delivered by
+                        seasoned hospitality experts with global experience.</p>
+                    <div class="hero-actions">
+                        <a href="#services" class="btn-primary">Hotel Services</a>
+                        <a href="#contact" class="btn-outline">Get In Touch</a>
+                    </div>
+                </div>
+
+                <div class="hero-slide-content" data-slide="1">
+                    <div class="hero-badge">Madinah Munawwara, Saudi Arabia</div>
+                    <h1 class="hero-title">Innovative Solutions<br><span class="gold">for Every Industry</span></h1>
+                    <p class="hero-sub">House of Management brings world-class expertise in Hotel Consultancy, IT
+                        Systems, Feasibility Studies, and Corporate Branding — powered by traditional Arabic
+                        hospitality.</p>
+                    <div class="hero-actions">
+                        <a href="#about" class="btn-primary">About HOM</a>
+                        <a href="#industries" class="btn-outline">Our Industries</a>
+                    </div>
+                </div>
+
+                <div class="hero-slide-content" data-slide="2">
+                    <div class="hero-badge">Corporate Strategy &amp; Planning</div>
+                    <h1 class="hero-title">Strategic <span class="gold">Management</span><br>Consulting</h1>
+                    <p class="hero-sub">From feasibility studies and business plans to IT infrastructure and quality
+                        management systems — HOM transforms your vision into operational excellence.</p>
+                    <div class="hero-actions">
+                        <a href="#feasibility" class="btn-primary">Feasibility Studies</a>
+                        <a href="#quality" class="btn-outline">Our Quality</a>
+                    </div>
+                </div>
+
+                <div class="hero-slide-content" data-slide="3">
+                    <div class="hero-badge">Regional &amp; International Reach</div>
+                    <h1 class="hero-title">Rooted in Arabia,<br><span class="gold">Reaching the World</span></h1>
+                    <p class="hero-sub">Serving clients across the Middle East with proven expertise in retail,
+                        government, utilities, and hospitality — backed by 9+ international and local partners.</p>
+                    <div class="hero-actions">
+                        <a href="#clients" class="btn-primary">Our Clients</a>
+                        <a href="#presence" class="btn-outline">Our Presence</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="hero-slider-controls">
+                <button class="hsc-prev" id="heroPrev" aria-label="Previous slide">&#8592;</button>
+                <div class="hsc-dots" id="hscDots">
+                    <button class="hsc-dot active" data-idx="0"></button>
+                    <button class="hsc-dot" data-idx="1"></button>
+                    <button class="hsc-dot" data-idx="2"></button>
+                    <button class="hsc-dot" data-idx="3"></button>
+                </div>
+                <button class="hsc-next" id="heroNext" aria-label="Next slide">&#8594;</button>
+            </div>
+
+            <!-- Slide progress bar -->
+            <div class="hero-progress" id="heroProgress">
+                <div class="hero-progress-fill" id="heroProgressFill"></div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="hero-scroll">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+
+        <!-- STATS BAR -->
+        <section class="stats-bar">
+            <div class="stats-inner">
+                <div class="stat-item reveal-up">
+                    <span class="stat-num" data-target="5">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Industries Served</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal-up">
+                    <span class="stat-num" data-target="12">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Core Services</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal-up">
+                    <span class="stat-num" data-target="9">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">International Clients</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal-up">
+                    <span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span>
+                    <span class="stat-label">Process Dependent</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-label reveal-up">Who We Are</div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 class="section-title reveal-up">A Team of Best Talent Backed with Rich Domain Expertise</h2>
+                        <p class="reveal-up">House of Management (HOM) is a solution provider company that specializes
+                            in providing innovative solutions to various industries. Our core strength is our expertise
+                            which we bring on board from different industries.</p>
+                        <p class="reveal-up">We provide solutions to different industry sectors including Hospitality,
+                            Travel and Tourism, and more. The solutions range from Hotel consultancy, Business plans,
+                            Quality management systems, Feasibility studies, HR development, IT systems, IT
+                            infrastructure, and back office support.</p>
+                        <p class="reveal-up">We bring on board the traditional Arabic hospitality with a highly
+                            motivated, innovative, and experienced team across the globe.</p>
+                        <div class="about-quote reveal-up">
+                            <blockquote>"At HOM, every task is <strong>process dependent</strong> — not person
+                                dependent."</blockquote>
+                        </div>
+                    </div>
+                    <div class="about-cards">
+                        <div class="about-card reveal-up">
+                            <div class="about-card-icon">🏆</div>
+                            <h4>World-Class Expertise</h4>
+                            <p>Management team of technocrats from Hospitality, Government, Utilities and IT sectors.
+                            </p>
+                        </div>
+                        <div class="about-card reveal-up">
+                            <div class="about-card-icon">⚙️</div>
+                            <h4>Process Driven</h4>
+                            <p>We document all internal processes and deliver the same when providing any solution.</p>
+                        </div>
+                        <div class="about-card reveal-up">
+                            <div class="about-card-icon">🌍</div>
+                            <h4>Global Experience</h4>
+                            <p>Agile development methodology and best practices from leading hospitality markets
+                                worldwide.</p>
+                        </div>
+                        <div class="about-card reveal-up">
+                            <div class="about-card-icon">📈</div>
+                            <h4>Revenue Focused</h4>
+                            <p>Guaranteed to maximize revenue and exceed forecasted budgets based on market segment
+                                expertise.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INDUSTRY EXPERIENCE -->
+        <section id="industries" class="industries section">
+            <div class="container">
+                <div class="section-label reveal-up">Where We Operate</div>
+                <h2 class="section-title text-center reveal-up">Industry Experience</h2>
+                <p class="section-desc text-center reveal-up">Our multidisciplinary team brings deep domain expertise
+                    across five major industry verticals.</p>
+                <div class="industry-grid">
+                    <div class="industry-card reveal-up">
+                        <div class="industry-icon">🏨</div>
+                        <h3>Hotel & Hospitality</h3>
+                        <p>Full-spectrum consultancy from business plans to hotel pre-opening and operations management.
+                        </p>
+                    </div>
+                    <div class="industry-card reveal-up">
+                        <div class="industry-icon">✈️</div>
+                        <h3>Travel & Tourism</h3>
+                        <p>Solutions tailored for travel agencies and tourism operators seeking operational excellence.
+                        </p>
+                    </div>
+                    <div class="industry-card reveal-up">
+                        <div class="industry-icon">🛒</div>
+                        <h3>Retail Business</h3>
+                        <p>Feasibility studies, IT solutions, and branding for retail businesses of all sizes.</p>
+                    </div>
+                    <div class="industry-card reveal-up">
+                        <div class="industry-icon">🏛️</div>
+                        <h3>Government Agencies</h3>
+                        <p>IT infrastructure, back-office support, and process improvement for public sector entities.
+                        </p>
+                    </div>
+                    <div class="industry-card reveal-up">
+                        <div class="industry-icon">⚡</div>
+                        <h3>Utility Companies</h3>
+                        <p>Technology and management systems for utility providers seeking modern, efficient operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="services section dark-section">
+            <div class="container">
+                <div class="section-label reveal-up">What We Offer</div>
+                <h2 class="section-title reveal-up">Our Core Services</h2>
+                <p class="section-desc reveal-up">Comprehensive solutions spanning consultancy, technology, and
+                    strategic planning across all industries we serve.</p>
+
+                <!-- Hotel & Hospitality Services -->
+                <div class="service-block reveal-up">
+                    <div class="service-block-header">
+                        <span class="service-num">01</span>
+                        <div>
+                            <h3>Hotel & Hospitality Industry</h3>
+                            <p>End-to-end services for hotel operators, investors, and management companies.</p>
+                        </div>
+                    </div>
+                    <div class="service-pills">
+                        <span class="pill">Business Plan for Hotel</span>
+                        <span class="pill">Finding Hotels for Lease</span>
+                        <span class="pill">Hotel Pre-opening</span>
+                        <span class="pill">IT Solutions</span>
+                        <span class="pill">Back Office Support</span>
+                        <span class="pill">Branding & Corporate Identity</span>
+                        <span class="pill">Wireless Network Setup</span>
+                        <span class="pill">CRM Implementation</span>
+                    </div>
+                </div>
+
+                <!-- Business Plan Detail -->
+                <div class="service-detail-grid">
+                    <div class="service-detail-card reveal-up">
+                        <h4>📋 Business Plan for Hotel</h4>
+                        <p>HOM provides comprehensive business plans to run a successful hotel organization. Our
+                            consultants have expertise from leading hotels in Saudi Arabia and abroad. We bring in the
+                            ideas and best practices from around the world, applying world-class technology with a local
+                            market scenario.</p>
+                    </div>
+                    <div class="service-detail-card reveal-up">
+                        <h4>🔑 Finding Hotels for Lease</h4>
+                        <p>HOM provides consultancy services to find hotels for lease and helps in operating them
+                            smoothly. Our leasing consultants are very experienced in getting the right deal. We also
+                            have excellent hands-on experience in maintaining hotel operations.</p>
+                    </div>
+                </div>
+
+                <!-- Hotel Pre-Opening -->
+                <div class="service-block reveal-up" style="margin-top: 3rem;">
+                    <div class="service-block-header">
+                        <span class="service-num">02</span>
+                        <div>
+                            <h3>Hotel Pre-Opening Service</h3>
+                            <p>HOM's standard pre-opening service covers complete project development and successful
+                                management operations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="preopening-grid">
+                    <div class="preopening-item reveal-up"><span>✓</span> Providing branding services</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Setting up pre-opening office & recruiting
+                        team</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Prepare hotel pre-opening budget</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Set up organization structure & headcount
+                    </div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Determine departmental objectives</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Set up pay scale & staff benefit policies
+                    </div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Establish SOPs & service quality standards
+                    </div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Develop overall recruitment plan</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Set up departmental training manuals</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Organize staff training</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Derive Pre-opening Advertising Plan</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Determine Pre-opening ceremony proposal</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Derive Staff Handbook</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Determine annual budget</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Conduct dry run</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> Prepare the pre-opening ceremony</div>
+                </div>
+
+                <!-- Retail Business Services -->
+                <div class="service-block reveal-up" style="margin-top: 3rem;">
+                    <div class="service-block-header">
+                        <span class="service-num">03</span>
+                        <div>
+                            <h3>Retail Business</h3>
+                            <p>Tailored solutions enabling retail businesses to launch, scale, and brand effectively.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service-pills">
+                        <span class="pill">Feasibility Study</span>
+                        <span class="pill">IT Solutions</span>
+                        <span class="pill">Development of Small Projects</span>
+                        <span class="pill">Branding & Corporate Identity</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEASIBILITY STUDY -->
+        <section id="feasibility" class="feasibility section">
+            <div class="container">
+                <div class="section-label reveal-up">Financial Planning</div>
+                <h2 class="section-title reveal-up">Feasibility Study Services</h2>
+                <p class="section-desc reveal-up">We streamline the creation of feasibility studies to add value to the
+                    decision-making process, supporting resource requests for proposed IT investments and new business
+                    ventures.</p>
+                <div class="feasibility-grid">
+                    <div class="feasibility-card reveal-up">
+                        <div class="feasibility-num">01</div>
+                        <h4>Streamline Decision Making</h4>
+                        <p>Add value to the decision-making process based on the results of agency planning and design
+                            efforts.</p>
+                    </div>
+                    <div class="feasibility-card reveal-up">
+                        <div class="feasibility-num">02</div>
+                        <h4>Financial Analysis</h4>
+                        <p>Incorporate Net Present Value, Internal Rate of Return, and Breakeven Analysis financial
+                            measures in the Cost/Benefit Analysis format.</p>
+                    </div>
+                    <div class="feasibility-card reveal-up">
+                        <div class="feasibility-num">03</div>
+                        <h4>New Venture Assessment</h4>
+                        <p>Determine the feasibility of a new business, side business, or new venture with thorough
+                            market analysis.</p>
+                    </div>
+                    <div class="feasibility-card reveal-up">
+                        <div class="feasibility-num">04</div>
+                        <h4>Investor Ready PPM</h4>
+                        <p>Create a professional feasibility study and Project Profile Model (PPM) for approaching
+                            investors and banks to raise capital.</p>
+                    </div>
+                    <div class="feasibility-card reveal-up">
+                        <div class="feasibility-num">05</div>
+                        <h4>IT Investment Support</h4>
+                        <p>Recognize the role of the feasibility study in supporting resource requests for proposed
+                            information technology investments.</p>
+                    </div>
+                    <div class="feasibility-card reveal-up">
+                        <div class="feasibility-num">06</div>
+                        <h4>IP Leveraging</h4>
+                        <p>Create a feasibility study to leverage your high-value intellectual property and position it
+                            for maximum returns.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORPORATE BRANDING -->
+        <section id="branding" class="branding section dark-section">
+            <div class="container">
+                <div class="branding-grid">
+                    <div class="branding-text">
+                        <div class="section-label reveal-up">Brand Identity</div>
+                        <h2 class="section-title reveal-up">Corporate Branding</h2>
+                        <p class="reveal-up">Corporate branding is the practice of using a company's name as a product
+                            brand name — an attempt to leverage corporate brand equity to create product brand
+                            recognition across a family of products.</p>
+                        <p class="reveal-up">Corporate branding can result in significant economies of scope since one
+                            advertising campaign can be used for several products. It also facilitates new product
+                            acceptance because potential buyers are already familiar with the name.</p>
+                        <p class="reveal-up">Branding can incorporate multiple touchpoints: logo, customer service,
+                            treatment and training of employees, packaging, advertising, stationery, and quality of
+                            products and services.</p>
+                        <div class="branding-cta reveal-up">
+                            <a href="#contact" class="btn-primary">Start Your Brand Journey</a>
+                        </div>
+                    </div>
+                    <div class="branding-touchpoints">
+                        <h4 class="reveal-up">Our Branding Touchpoints</h4>
+                        <div class="touchpoint reveal-up"><span class="tp-icon">🎨</span>
+                            <div><strong>Logo Design</strong>
+                                <p>Crafting logos that communicate your brand's identity</p>
+                            </div>
+                        </div>
+                        <div class="touchpoint reveal-up"><span class="tp-icon">📄</span>
+                            <div><strong>Stationery Items</strong>
+                                <p>Business cards, letterheads, and corporate stationery</p>
+                            </div>
+                        </div>
+                        <div class="touchpoint reveal-up"><span class="tp-icon">📢</span>
+                            <div><strong>Advertising Strategy</strong>
+                                <p>Campaign concepts that resonate with your audience</p>
+                            </div>
+                        </div>
+                        <div class="touchpoint reveal-up"><span class="tp-icon">🤝</span>
+                            <div><strong>Customer Experience</strong>
+                                <p>Training employees to deliver brand-consistent service</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUALITY & STRATEGY -->
+        <section id="quality" class="quality section">
+            <div class="container">
+                <div class="section-label reveal-up">Our Commitment</div>
+                <h2 class="section-title text-center reveal-up">Quality & Strategy</h2>
+                <div class="qs-grid">
+                    <div class="qs-card reveal-up">
+                        <div class="qs-icon">🎯</div>
+                        <h3>Our Strategy</h3>
+                        <p>Our strategy for supporting customers is to work close as an embedded team. The aim is to
+                            make the customer feel they have strong support.</p>
+                        <p>Whether you're a small business or a multinational corporation, we can help create new
+                            opportunities and enhance your market value. The goal is to match your objectives with the
+                            best technical, cost-effective, and long-term strategy for your company.</p>
+                    </div>
+                    <div class="qs-card qs-card-gold reveal-up">
+                        <div class="qs-icon">⭐</div>
+                        <h3>Our Quality</h3>
+                        <p>Our quality culture is a journey to excellence with innovation, institutionalization, and
+                            integrity in our operations. At HOM, quality is a major thrust in all functions we perform.
+                        </p>
+                        <ul class="quality-list">
+                            <li>Clear process definition</li>
+                            <li>Detailed documentation — project specs, training manuals, work logs</li>
+                            <li>Independent QA & certification group with defined test plans</li>
+                            <li>Statistical measurement of quality parameters</li>
+                            <li>Technical support interface for client satisfaction</li>
+                            <li>Process replication across all engagements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- CLIENTS -->
+        <section id="clients" class="clients section dark-section">
+            <div class="container">
+                <div class="section-label reveal-up">Trusted By</div>
+                <h2 class="section-title text-center reveal-up">Our Clients</h2>
+                <p class="section-desc text-center reveal-up">A proud portfolio of local and international organizations
+                    who trust HOM to deliver excellence.</p>
+
+                <h4 class="clients-sub reveal-up">International Clients</h4>
+                <div class="marquee-wrapper reveal-up">
+                    <div class="marquee-track">
+                        <div class="logo-card"><img src="images/logo_discovery_channel.png" alt="Discovery Channel">
+                        </div>
+                        <div class="logo-card"><img src="images/logo_bank_of_america.png" alt="Bank of America"></div>
+                        <div class="logo-card"><img src="images/logo_usaid.png" alt="USAID"></div>
+                        <div class="logo-card"><img src="images/logo_people_arts.png" alt="People + Arts"></div>
+                        <div class="logo-card"><img src="images/logo_abn_amro.png" alt="ABN AMRO"></div>
+                        <div class="logo-card"><img src="images/logo_animal_planet.png" alt="Animal Planet"></div>
+                        <div class="logo-card"><img src="images/logo_itc_limited.png" alt="ITC Limited"></div>
+                        <div class="logo-card"><img src="images/logo_discovery_home.png" alt="Discovery Home Health">
+                        </div>
+                        <div class="logo-card"><img src="images/logo_hcl.png" alt="HCL Technologies"></div>
+                        <div class="logo-card"><img src="images/logo_discovery_channel.png" alt="Discovery Channel">
+                        </div>
+                        <div class="logo-card"><img src="images/logo_bank_of_america.png" alt="Bank of America"></div>
+                        <div class="logo-card"><img src="images/logo_usaid.png" alt="USAID"></div>
+                        <div class="logo-card"><img src="images/logo_people_arts.png" alt="People + Arts"></div>
+                        <div class="logo-card"><img src="images/logo_abn_amro.png" alt="ABN AMRO"></div>
+                        <div class="logo-card"><img src="images/logo_animal_planet.png" alt="Animal Planet"></div>
+                        <div class="logo-card"><img src="images/logo_itc_limited.png" alt="ITC Limited"></div>
+                        <div class="logo-card"><img src="images/logo_discovery_home.png" alt="Discovery Home Health">
+                        </div>
+                        <div class="logo-card"><img src="images/logo_hcl.png" alt="HCL Technologies"></div>
+                    </div>
+                </div>
+
+                <h4 class="clients-sub reveal-up" style="margin-top: 4rem;">Local Saudi Clients</h4>
+                <div class="local-clients-grid">
+                    <div class="logo-card-lg reveal-up">
+                        <img src="images/logo_dyar_hotels.png" alt="Dyar Hotels Resorts">
+                        <span>Dyar Hotels &amp; Resorts</span>
+                    </div>
+                    <div class="logo-card-lg reveal-up">
+                        <img src="images/logo_dar_altaqwa.png" alt="Dar Al Taqwa Hotel Madinah">
+                        <span>Dar Al Taqwa Hotel &mdash; Madinah</span>
+                    </div>
+                    <div class="logo-card-lg reveal-up">
+                        <img src="images/logo_riyadh_palace.png" alt="Riyadh Palace Hotel">
+                        <span>Riyadh Palace Hotel &#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <div class="logo-card-lg reveal-up">
+                        <img src="images/logo_aramas.png" alt="Aramas Hotels Resorts">
+                        <span>Aramas Hotels &amp; Resorts</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- ═══ PRESENCE SECTION ═══ -->
+        <section id="presence" class="presence-section">
+
+            <!-- Layer 1: Starfield canvas -->
+            <canvas id="starCanvas"></canvas>
+
+            <!-- Layer 2: Madinah Skyline SVG -->
+            <div class="skyline-wrap">
+                <svg id="skylineSVG" viewBox="0 0 1440 320" preserveAspectRatio="xMidYMax meet"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="horizGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="rgba(201,168,76,0.08)" />
+                            <stop offset="100%" stop-color="rgba(201,168,76,0)" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- ── Left small buildings ── -->
+                    <rect x="30" y="250" width="28" height="70" fill="#0a0d16" />
+                    <rect x="62" y="232" width="18" height="88" fill="#0a0d16" />
+                    <rect x="84" y="258" width="22" height="62" fill="#0a0d16" />
+                    <rect x="110" y="240" width="16" height="80" fill="#0a0d16" />
+                    <rect x="130" y="260" width="30" height="60" fill="#0a0d16" />
+                    <rect x="164" y="245" width="20" height="75" fill="#0a0d16" />
+                    <rect x="190" y="252" width="26" height="68" fill="#0a0d16" />
+                    <rect x="220" y="235" width="18" height="85" fill="#0a0d16" />
+                    <rect x="244" y="256" width="22" height="64" fill="#0a0d16" />
+                    <rect x="270" y="242" width="32" height="78" fill="#0a0d16" />
+                    <rect x="308" y="255" width="20" height="65" fill="#0a0d16" />
+                    <rect x="335" y="238" width="16" height="82" fill="#0a0d16" />
+                    <rect x="358" y="248" width="28" height="72" fill="#0a0d16" />
+                    <rect x="392" y="260" width="18" height="60" fill="#0a0d16" />
+                    <!-- taller accent buildings left -->
+                    <rect x="415" y="210" width="22" height="110" fill="#0a0d16" />
+                    <rect x="442" y="222" width="26" height="98" fill="#0a0d16" />
+                    <rect x="472" y="215" width="18" height="105" fill="#0a0d16" />
+                    <rect x="496" y="230" width="30" height="90" fill="#0a0d16" />
+                    <rect x="532" y="200" width="20" height="120" fill="#0a0d16" />
+                    <rect x="558" y="220" width="24" height="100" fill="#0a0d16" />
+                    <rect x="588" y="236" width="18" height="84" fill="#0a0d16" />
+                    <rect x="612" y="218" width="28" height="102" fill="#0a0d16" />
+
+                    <!-- ── CENTRAL CLUSTER — Al-Masjid An-Nabawi inspired ── -->
+                    <!-- Ground base of complex -->
+                    <rect x="620" y="260" width="200" height="60" fill="#0a0d16" />
+
+                    <!-- Outer tall minarets (left & right) -->
+                    <!-- Left outer minaret -->
+                    <rect x="635" y="120" width="12" height="140" fill="#0a0d16" />
+                    <!-- Left outer minaret balcony rings -->
+                    <rect x="631" y="170" width="20" height="3" fill="#0a0d16" />
+                    <rect x="631" y="210" width="20" height="3" fill="#0a0d16" />
+                    <!-- Left outer minaret tip (spire) -->
+                    <polygon points="641,120 648,107 635,120" fill="#0a0d16" />
+                    <!-- Crescent on left minaret -->
+                    <path d="M641,112 A4,4 0 1,1 641,104 A2.5,2.5 0 1,0 641,112 Z" fill="#0a0d16" />
+
+                    <!-- Right outer minaret -->
+                    <rect x="793" y="120" width="12" height="140" fill="#0a0d16" />
+                    <rect x="789" y="170" width="20" height="3" fill="#0a0d16" />
+                    <rect x="789" y="210" width="20" height="3" fill="#0a0d16" />
+                    <polygon points="799,120 806,107 793,120" fill="#0a0d16" />
+                    <path d="M799,112 A4,4 0 1,1 799,104 A2.5,2.5 0 1,0 799,112 Z" fill="#0a0d16" />
+
+                    <!-- Inner minarets (left & right) -->
+                    <rect x="667" y="148" width="10" height="112" fill="#0a0d16" />
+                    <rect x="664" y="195" width="16" height="3" fill="#0a0d16" />
+                    <polygon points="672,148 678,137 666,148" fill="#0a0d16" />
+
+                    <rect x="763" y="148" width="10" height="112" fill="#0a0d16" />
+                    <rect x="760" y="195" width="16" height="3" fill="#0a0d16" />
+                    <polygon points="768,148 774,137 762,148" fill="#0a0d16" />
+
+                    <!-- Mosque main body -->
+                    <rect x="690" y="220" width="60" height="40" fill="#0a0d16" />
+
+                    <!-- Side colonnades -->
+                    <rect x="660" y="240" width="30" height="20" fill="#0a0d16" />
+                    <rect x="750" y="240" width="30" height="20" fill="#0a0d16" />
+
+                    <!-- Central dome (main) -->
+                    <ellipse cx="720" cy="222" rx="45" ry="38" fill="#0a0d16" />
+                    <!-- Side smaller domes -->
+                    <ellipse cx="686" cy="240" rx="18" ry="14" fill="#0a0d16" />
+                    <ellipse cx="754" cy="240" rx="18" ry="14" fill="#0a0d16" />
+
+                    <!-- ── Right mid buildings ── -->
+                    <rect x="840" y="228" width="24" height="92" fill="#0a0d16" />
+                    <rect x="868" y="242" width="18" height="78" fill="#0a0d16" />
+                    <rect x="892" y="215" width="26" height="105" fill="#0a0d16" />
+                    <rect x="922" y="238" width="20" height="82" fill="#0a0d16" />
+                    <rect x="948" y="250" width="28" height="70" fill="#0a0d16" />
+                    <rect x="982" y="235" width="16" height="85" fill="#0a0d16" />
+                    <rect x="1002" y="252" width="22" height="68" fill="#0a0d16" />
+                    <rect x="1030" y="244" width="18" height="76" fill="#0a0d16" />
+                    <rect x="1054" y="258" width="26" height="62" fill="#0a0d16" />
+                    <rect x="1086" y="240" width="20" height="80" fill="#0a0d16" />
+                    <rect x="1112" y="255" width="16" height="65" fill="#0a0d16" />
+                    <rect x="1132" y="248" width="28" height="72" fill="#0a0d16" />
+                    <rect x="1164" y="260" width="18" height="60" fill="#0a0d16" />
+                    <rect x="1190" y="243" width="22" height="77" fill="#0a0d16" />
+                    <rect x="1218" y="255" width="30" height="65" fill="#0a0d16" />
+                    <rect x="1254" y="240" width="16" height="80" fill="#0a0d16" />
+                    <rect x="1276" y="252" width="24" height="68" fill="#0a0d16" />
+                    <rect x="1306" y="260" width="20" height="60" fill="#0a0d16" />
+                    <rect x="1332" y="248" width="28" height="72" fill="#0a0d16" />
+                    <rect x="1366" y="256" width="18" height="64" fill="#0a0d16" />
+                    <rect x="1394" y="242" width="22" height="78" fill="#0a0d16" />
+                    <rect x="1420" y="260" width="20" height="60" fill="#0a0d16" />
+
+                    <!-- ── Palm trees ── -->
+                    <!-- Palm: trunk + 5 frond ellipses fanned out -->
+                    <!-- Palm 1 at x=135 -->
+                    <rect x="143" y="250" width="5" height="45" fill="#0a0d16" />
+                    <ellipse cx="145" cy="248" rx="16" ry="5" transform="rotate(-35,145,248)" fill="#0a0d16" />
+                    <ellipse cx="145" cy="248" rx="16" ry="5" transform="rotate(-10,145,248)" fill="#0a0d16" />
+                    <ellipse cx="145" cy="248" rx="16" ry="5" transform="rotate(15,145,248)" fill="#0a0d16" />
+                    <ellipse cx="145" cy="248" rx="16" ry="5" transform="rotate(40,145,248)" fill="#0a0d16" />
+                    <ellipse cx="145" cy="248" rx="14" ry="5" transform="rotate(-60,145,248)" fill="#0a0d16" />
+
+                    <!-- Palm 2 at x=510 -->
+                    <rect x="518" y="230" width="5" height="50" fill="#0a0d16" />
+                    <ellipse cx="520" cy="228" rx="16" ry="5" transform="rotate(-40,520,228)" fill="#0a0d16" />
+                    <ellipse cx="520" cy="228" rx="16" ry="5" transform="rotate(-12,520,228)" fill="#0a0d16" />
+                    <ellipse cx="520" cy="228" rx="16" ry="5" transform="rotate(14,520,228)" fill="#0a0d16" />
+                    <ellipse cx="520" cy="228" rx="14" ry="5" transform="rotate(42,520,228)" fill="#0a0d16" />
+                    <ellipse cx="520" cy="228" rx="14" ry="5" transform="rotate(-62,520,228)" fill="#0a0d16" />
+
+                    <!-- Palm 3 at x=1050 -->
+                    <rect x="1058" y="235" width="5" height="48" fill="#0a0d16" />
+                    <ellipse cx="1060" cy="233" rx="16" ry="5" transform="rotate(-38,1060,233)" fill="#0a0d16" />
+                    <ellipse cx="1060" cy="233" rx="16" ry="5" transform="rotate(-10,1060,233)" fill="#0a0d16" />
+                    <ellipse cx="1060" cy="233" rx="16" ry="5" transform="rotate(16,1060,233)" fill="#0a0d16" />
+                    <ellipse cx="1060" cy="233" rx="14" ry="5" transform="rotate(44,1060,233)" fill="#0a0d16" />
+
+                    <!-- Palm 4 at x=1300 -->
+                    <rect x="1308" y="240" width="5" height="45" fill="#0a0d16" />
+                    <ellipse cx="1310" cy="238" rx="16" ry="5" transform="rotate(-35,1310,238)" fill="#0a0d16" />
+                    <ellipse cx="1310" cy="238" rx="16" ry="5" transform="rotate(-8,1310,238)" fill="#0a0d16" />
+                    <ellipse cx="1310" cy="238" rx="16" ry="5" transform="rotate(18,1310,238)" fill="#0a0d16" />
+                    <ellipse cx="1310" cy="238" rx="14" ry="5" transform="rotate(45,1310,238)" fill="#0a0d16" />
+
+                    <!-- Ground horizon glow -->
+                    <rect x="0" y="288" width="1440" height="20" fill="url(#horizGlow)" />
+                    <!-- Golden horizon line -->
+                    <rect x="0" y="299" width="1440" height="1" fill="rgba(201,168,76,0.15)" />
+                    <!-- Ground fill -->
+                    <rect x="0" y="300" width="1440" height="20" fill="#0a0d16" />
+                </svg>
+            </div>
+
+            <!-- Layer 3: Ground fog -->
+            <div class="presence-fog"></div>
+
+            <!-- Layer 4: Content -->
+            <div class="presence-content container">
+                <div class="presence-center"
+                    style="display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 10; margin-bottom: 4rem;">
+                    <span class="section-label">Our Presence</span>
+                    <h2 class="section-title">
+                        Rooted in <span class="gold">Madinah</span>,<br>
+                        Reaching the World
+                    </h2>
+                    <p class="presence-tagline" style="max-width: 600px; margin: 0 auto 2rem; color: var(--grey-2);">
+                        From the heart of the Arabian Peninsula, House of Management serves clients across the Middle
+                        East and beyond.
+                    </p>
+
+                    <div class="globe-wrap"
+                        style="width: 100%; max-width: 700px; margin: 0 auto; position: relative; height: 700px; display: flex; justify-content: center; align-items: center; z-index: 20;"
+                        id="globeVizWrap">
+                        <div id="globeViz" style="cursor: grab;"></div>
+                    </div>
+
+                    <div class="presence-reach-stats"
+                        style="display: flex; gap: 3rem; justify-content: center; margin-top: 3rem; background: rgba(0,0,0,0.5); padding: 1.5rem 3rem; border-radius: 100px; border: 1px solid rgba(201,168,76,0.2);">
+                        <div class="prs-item" style="text-align: center;">
+                            <span class="prs-num"
+                                style="display: block; font-family: var(--font-display); font-size: 2.5rem; font-weight: bold; color: var(--gold); line-height: 1;">5</span>
+                            <span class="prs-lbl"
+                                style="font-size: 0.8rem; color: var(--grey-2); text-transform: uppercase; letter-spacing: 0.1em;">Countries
+                                reached</span>
+                        </div>
+                        <div class="prs-sep" style="width: 1px; background: rgba(255,255,255,0.1);"></div>
+                        <div class="prs-item" style="text-align: center;">
+                            <span class="prs-num"
+                                style="display: block; font-family: var(--font-display); font-size: 2.5rem; font-weight: bold; color: var(--gold); line-height: 1;">9+</span>
+                            <span class="prs-lbl"
+                                style="font-size: 0.8rem; color: var(--grey-2); text-transform: uppercase; letter-spacing: 0.1em;">Client
+                                cities</span>
+                        </div>
+                        <div class="prs-sep" style="width: 1px; background: rgba(255,255,255,0.1);"></div>
+                        <div class="prs-item" style="text-align: center;">
+                            <span class="prs-num"
+                                style="display: block; font-family: var(--font-display); font-size: 2.5rem; font-weight: bold; color: var(--gold); line-height: 1;">1</span>
+                            <span class="prs-lbl"
+                                style="font-size: 0.8rem; color: var(--grey-2); text-transform: uppercase; letter-spacing: 0.1em;">Origin
+                                city</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="contact-form-grid"
+                style="margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <div class="cf-info">
+                    <div class="section-label reveal-up">Get In Touch</div>
+                    <h2 class="section-title reveal-up">Start a Conversation</h2>
+                    <p class="reveal-up" style="color:var(--grey-2);line-height:1.8;margin-bottom:2rem;">Whether you
+                        need hotel consultancy, a feasibility study, IT infrastructure, or corporate branding — our
+                        team is ready to deliver world-class solutions tailored to your needs.</p>
+                    <div class="cf-contact-item reveal-up">
+                        <span class="cf-icon">📍</span>
+                        <p>Madinah<br>Al-Rawabi District<br>Saudi Arabia</p>
+                    </div>
+                    <div class="cf-contact-item reveal-up">
+                        <span class="cf-icon">📞</span>
+                        <p><a href="tel:+966503139139">+966 50 313 9139</a></p>
+                    </div>
+                    <div class="cf-contact-item reveal-up">
+                        <span class="cf-icon">✉️</span>
+                        <p><a href="mailto:info@hom.com.sa">info@hom.com.sa</a></p>
+                    </div>
+                </div>
+                <div class="cf-form reveal-up">
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="cf-name" placeholder=" " required>
+                            <label for="cf-name">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="cf-company" placeholder=" " required>
+                            <label for="cf-company">Company</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="cf-email" placeholder=" " required>
+                            <label for="cf-email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="cf-phone" placeholder=" ">
+                            <label for="cf-phone">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="cf-service">
+                                <option value="" disabled selected></option>
+                                <option>Hotel Consultancy</option>
+                                <option>Business Plan for Hotel</option>
+                                <option>Hotel Pre-opening</option>
+                                <option>Feasibility Study</option>
+                                <option>IT Solutions</option>
+                                <option>Corporate Branding</option>
+                                <option>Other</option>
+                            </select>
+                            <label for="cf-service" class="select-label">Service Interest</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="cf-message" rows="4" placeholder=" "></textarea>
+                            <label for="cf-message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit" id="cf-submit">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-spinner" style="display:none">●●●</span>
+                        </button>
+                        <div class="cf-success" id="cf-success" style="display:none">
+                            <div class="success-icon">✓</div>
+                            <p>Thank you! We'll be in touch shortly.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap">
+                        <img src="images/hom_official_logo-removebg-preview.png" alt="House of Management Official Logo"
+                            class="footer-logo-img">
+                    </div>
+                    <p>Innovative Solutions for Every Industry — Powered by Arabic Hospitality and Global Expertise.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Quick Links</h5>
+                    <a href="#about">About HOM</a>
+                    <a href="#industries">Industries</a>
+                    <a href="#services">Services</a>
+                    <a href="#feasibility">Feasibility Study</a>
+                    <a href="#branding">Corporate Branding</a>
+                    <a href="#quality">Quality & Strategy</a>
+                    <a href="#clients">Our Clients</a>
+                </div>
+                <div class="footer-contact">
+                    <h5>Contact Us</h5>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <p>Madinah<br>Al-Rawabi District<br>Saudi Arabia</p>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <p>
+                            <a href="tel:+966503139139">+966 50 313 9139</a>
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <p><a href="mailto:info@hom.com.sa">info@hom.com.sa</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <span>🌐</span>
+                        <p><a href="http://www.hom.com.sa">www.hom.com.sa</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 House of Management. All Rights Reserved. | Website design by <a
+                        href="https://logicity.in" target="_blank"
+                        style="color: var(--gold); text-decoration: none;">logicity.in</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="scroll-progress"></div>
+    <div id="cursor-circle"></div>
+    <div id="cursor-dot"></div>
+    <div class="dot-nav" id="dot-nav"></div>
+
+    <!-- LAYER 2 — Update Modal Popup -->
+    <div class="update-modal-overlay" id="updateOverlay">
+        <div class="update-modal" id="updateModal" role="dialog" aria-label="Company Updates">
+            <div class="update-modal-topbar"></div>
+            <div class="update-modal-inner">
+                <div class="update-modal-head">
+                    <div class="update-modal-badge">
+                        <span class="ann-live-dot"></span>
+                        <span>Company Updates</span>
+                    </div>
+                    <button class="update-modal-x" id="updateModalClose">&#x2715;</button>
+                </div>
+                <h3 class="update-modal-title">What's New at HOM</h3>
+                <p class="update-modal-sub">Latest announcements from House of Management</p>
+                <div class="update-list">
+                    <div class="update-item">
+                        <span class="update-item-icon">&#x1F3C6;</span>
+                        <div class="update-item-body">
+                            <p class="update-item-text"><strong>Award:</strong> HOM named Top Hospitality Consultant —
+                                KSA Hospitality Summit 2024</p>
+                            <span class="update-item-time">2 days ago</span>
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-item-icon">&#x1F91D;</span>
+                        <div class="update-item-body">
+                            <p class="update-item-text"><strong>Partnership:</strong> Strategic deal signed with Dyar
+                                Hotels &amp; Resorts</p>
+                            <span class="update-item-time">1 week ago</span>
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-item-icon">&#x1F3E8;</span>
+                        <div class="update-item-body">
+                            <p class="update-item-text"><strong>New Project:</strong> Pre-opening management for 3
+                                Madinah properties now underway</p>
+                            <span class="update-item-time">2 weeks ago</span>
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-item-icon">&#x1F4CB;</span>
+                        <div class="update-item-body">
+                            <p class="update-item-text"><strong>Hiring:</strong> Senior Consultant &amp; IT Manager
+                                roles open — apply via info@hom.com.sa</p>
+                            <span class="update-item-time">3 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="update-modal-footer">
+                    <button class="update-dont-show" id="updateDontShow">Don't show again</button>
+                    <a href="#about" class="update-modal-cta" id="updateCTA">View All Updates &#x2192;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Activity Toast -->
+    <div class="live-toast-container" id="liveToastContainer">
+        <div class="live-toast" id="liveToast">
+            <div class="lt-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div class="lt-content">
+                <div class="lt-title" id="ltTitle">Someone from Riyadh</div>
+                <div class="lt-desc" id="ltDesc">just downloaded the Company Profile</div>
+                <div class="lt-time" id="ltTime">Just now</div>
+            </div>
+            <button class="lt-close" id="ltClose">&times;</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

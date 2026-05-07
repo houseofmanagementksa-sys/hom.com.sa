@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="lang-ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Management — Innovative Solutions Provider | Madinah, KSA</title>
+    <meta name="description"
+        content="House of Management (HOM) — A world-class solution provider specializing in Hotel Consultancy, IT Systems, دراسات الجدوى, and العلامة التجارية للشركات. Based in Madinah, المملكة العربية السعودية.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/globe.gl"></script>
+</head>
+
+<body>
+
+    <!-- LAYER 1 — Announcement Ticker Bar -->
+    <div class="ann-bar" id="annBar">
+        <div class="ann-bar-live">
+            <span class="ann-live-dot"></span>
+            <span class="ann-live-label">LIVE</span>
+        </div>
+        <div class="ann-ticker-viewport">
+            <div class="ann-ticker-track" id="annTickerTrack">
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-new">NEW</span>
+                    HOM launches Hotel Pre-Opening services for 3 new properties in Madinah Munawwara
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-award">AWARD</span>
+                    HOM ranked Top Management Consultancy — KSA Hospitality Summit 2024
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-partner">PARTNER</span>
+                    New strategic partnership signed with Dyar Hotels &amp; Resorts
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-hire">HIRING</span>
+                    HOM is expanding — Senior Hotel Consultant positions now open in Madinah
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <!-- Duplicate for seamless loop -->
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-new">NEW</span>
+                    HOM launches Hotel Pre-Opening services for 3 new properties in Madinah Munawwara
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-award">AWARD</span>
+                    HOM ranked Top Management Consultancy — KSA Hospitality Summit 2024
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-partner">PARTNER</span>
+                    New strategic partnership signed with Dyar Hotels &amp; Resorts
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+                <span class="ann-tick-item">
+                    <span class="ann-tick-tag tag-hire">HIRING</span>
+                    HOM is expanding — Senior Hotel Consultant positions now open in Madinah
+                    <span class="ann-tick-sep">◆</span>
+                </span>
+            </div>
+        </div>
+        <button class="ann-bar-close" id="annBarClose" aria-label="Close announcement bar">&#x2715;</button>
+    </div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-brand">
+                <div class="nav-logo-wrap">
+                    <img src="images/hom_official_logo-removebg-preview.png" alt="House of Management Logo"
+                        class="nav-logo-img">
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">عن الدار</a></li>
+                <li><a href="#industries">القطاعات</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#quality">الجودة</a></li>
+                <li><a href="#clients">العملاء</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="index.html" class="lang-toggle" aria-label="Switch to English">English</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#home">الرئيسية</a>
+            <a href="#about">عن الدار</a>
+            <a href="#industries">القطاعات</a>
+            <a href="#services">الخدمات</a>
+            <a href="#quality">الجودة</a>
+            <a href="#clients">العملاء</a>
+            <a href="#contact">اتصل بنا</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+
+            <!-- Background Slides -->
+            <div class="hero-slides" id="heroSlides">
+
+                <!-- Slide 1: الفنادق والضيافة -->
+                <div class="hero-slide active" style="background-image:url('images/hero_slide_hotel.png')">
+                    <div class="slide-overlay"></div>
+                </div>
+
+                <!-- Slide 2: Madinah City -->
+                <div class="hero-slide" style="background-image:url('images/hero_slide_madinah.png')">
+                    <div class="slide-overlay"></div>
+                </div>
+
+                <!-- Slide 3: Corporate Boardroom -->
+                <div class="hero-slide" style="background-image:url('images/hero_slide_business.png')">
+                    <div class="slide-overlay"></div>
+                </div>
+
+                <!-- Slide 4: City Skyline -->
+                <div class="hero-slide" style="background-image:url('images/hero_slide_skyline.png')">
+                    <div class="slide-overlay"></div>
+                </div>
+            </div>
+
+            <!-- Particle canvas on top of slides -->
+            <canvas id="bg-canvas"></canvas>
+
+            <!-- Slide Content — changes per slide -->
+            <div class="hero-content">
+                <div class="hero-slide-content active" data-slide="0">
+                    <div class="hero-badge">استشارات الفنادق والضيافة</div>
+                    <h1 class="hero-title">حلول فندقية <span class="gold">عالمية المستوى</span><br>من المدينة المنورة</h1>
+                    <p class="hero-sub">خدمات ما قبل الافتتاح، تخطيط الأعمال، والعمليات الفندقية — يقدمها خبراء ضيافة متمرسون بخبرة عالمية.</p>
+                    <div class="hero-actions">
+                        <a href="#services" class="btn-primary">خدمات الفنادق</a>
+                        <a href="#contact" class="btn-outline">تواصل معنا</a>
+                    </div>
+                </div>
+
+                <div class="hero-slide-content" data-slide="1">
+                    <div class="hero-badge">المدينة المنورة، المملكة العربية السعودية</div>
+                    <h1 class="hero-title">حلول مبتكرة<br><span class="gold">لكافة القطاعات</span></h1>
+                    <p class="hero-sub">دار الإدارة تقدم خبرات عالمية في استشارات الفنادق، أنظمة تقنية المعلومات، دراسات الجدوى، وبناء العلامات التجارية — مدعومة بالضيافة العربية الأصيلة.</p>
+                    <div class="hero-actions">
+                        <a href="#about" class="btn-primary">عن الدار</a>
+                        <a href="#industries" class="btn-outline">قطاعاتنا</a>
+                    </div>
+                </div>
+
+                <div class="hero-slide-content" data-slide="2">
+                    <div class="hero-badge">التخطيط الاستراتيجي للشركات</div>
+                    <h1 class="hero-title">استشارات إدارية<br><span class="gold">استراتيجية</span></h1>
+                    <p class="hero-sub">من دراسات الجدوى وخطط الأعمال إلى البنية التحتية التقنية وأنظمة إدارة الجودة — دار الإدارة تحول رؤيتك إلى تميز تشغيلي.</p>
+                    <div class="hero-actions">
+                        <a href="#feasibility" class="btn-primary">دراسات الجدوى</a>
+                        <a href="#quality" class="btn-outline">جودتنا</a>
+                    </div>
+                </div>
+
+                <div class="hero-slide-content" data-slide="3">
+                    <div class="hero-badge">امتداد إقليمي ودولي</div>
+                    <h1 class="hero-title">جذورنا عربية،<br><span class="gold">ونصل للعالم</span></h1>
+                    <p class="hero-sub">نخدم عملاءنا في جميع أنحاء الشرق الأوسط بخبرات مثبتة في قطاعات التجزئة، الجهات الحكومية، المرافق، والضيافة — مدعومة بأكثر من 9 شركاء دوليين ومحليين.</p>
+                    <div class="hero-actions">
+                        <a href="#clients" class="btn-primary">عملاؤنا</a>
+                        <a href="#presence" class="btn-outline">تواجدنا</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="hero-slider-controls">
+                <button class="hsc-prev" id="heroPrev" aria-label="Previous slide">&#8592;</button>
+                <div class="hsc-dots" id="hscDots">
+                    <button class="hsc-dot active" data-idx="0"></button>
+                    <button class="hsc-dot" data-idx="1"></button>
+                    <button class="hsc-dot" data-idx="2"></button>
+                    <button class="hsc-dot" data-idx="3"></button>
+                </div>
+                <button class="hsc-next" id="heroNext" aria-label="Next slide">&#8594;</button>
+            </div>
+
+            <!-- Slide progress bar -->
+            <div class="hero-progress" id="heroProgress">
+                <div class="hero-progress-fill" id="heroProgressFill"></div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="hero-scroll">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+
+        <!-- STATS BAR -->
+        <section class="stats-bar">
+            <div class="stats-inner">
+                <div class="stat-item reveal-up">
+                    <span class="stat-num" data-target="5">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">قطاعات نخدمها</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal-up">
+                    <span class="stat-num" data-target="12">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">خدمات رئيسية</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal-up">
+                    <span class="stat-num" data-target="9">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">عملاء دوليين</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal-up">
+                    <span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span>
+                    <span class="stat-label">اعتماد على العمليات</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-label reveal-up">من نحن</div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 class="section-title reveal-up">فريق من أفضل الكفاءات مدعوم بخبرات غنية في المجال</h2>
+                        <p class="reveal-up">دار الإدارة (HOM) هي شركة تقدم حلولاً مبتكرة لمختلف القطاعات. تكمن قوتنا الأساسية في الخبرات الواسعة التي نجلبها من صناعات مختلفة.</p>
+                        <p class="reveal-up">نقدم حلولاً لمختلف القطاعات بما في ذلك الضيافة، السفر والسياحة، وغيرها. تتراوح الحلول من استشارات الفنادق، خطط الأعمال، أنظمة إدارة الجودة، دراسات الجدوى، تطوير الموارد البشرية، أنظمة تقنية المعلومات، البنية التحتية لتقنية المعلومات، ودعم المكاتب الخلفية.</p>
+                        <p class="reveal-up">نجلب معنا الضيافة العربية الأصيلة بفريق عمل متحفز، مبتكر، وذو خبرة عالية عبر أنحاء العالم.</p>
+                        <div class="about-quote reveal-up">
+                            <blockquote>"في دار الإدارة، تعتمد كل مهمة على <strong>العمليات</strong> — وليس على الأشخاص."</blockquote>
+                        </div>
+                    </div>
+                    <div class="about-cards">
+                        <div class="about-card reveal-up">
+                            <div class="about-card-icon">🏆</div>
+                            <h4>خبرات عالمية</h4>
+                            <p>فريق إداري من الخبراء في قطاعات الضيافة، الحكومة، المرافق، وتقنية المعلومات.
+                            </p>
+                        </div>
+                        <div class="about-card reveal-up">
+                            <div class="about-card-icon">⚙️</div>
+                            <h4>إدارة بالعمليات</h4>
+                            <p>نقوم بتوثيق جميع العمليات الداخلية وتقديمها عند توفير أي حلول.</p>
+                        </div>
+                        <div class="about-card reveal-up">
+                            <div class="about-card-icon">🌍</div>
+                            <h4>خبرة دولية</h4>
+                            <p>منهجية تطوير مرنة وأفضل الممارسات من أسواق الضيافة الرائدة حول العالم.</p>
+                        </div>
+                        <div class="about-card reveal-up">
+                            <div class="about-card-icon">📈</div>
+                            <h4>التركيز على الإيرادات</h4>
+                            <p>ضمان تعظيم الإيرادات وتجاوز الميزانيات المتوقعة بناءً على خبرتنا في قطاعات السوق.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INDUSTRY EXPERIENCE -->
+        <section id="industries" class="industries section">
+            <div class="container">
+                <div class="section-label reveal-up">أين نعمل</div>
+                <h2 class="section-title text-center reveal-up">خبرات القطاعات</h2>
+                <p class="section-desc text-center reveal-up">يجلب فريقنا متعدد التخصصات خبرات عميقة عبر خمسة قطاعات رئيسية.</p>
+                <div class="industry-grid">
+                    <div class="industry-card reveal-up">
+                        <div class="industry-icon">🏨</div>
+                        <h3>الفنادق والضيافة</h3>
+                        <p>استشارات شاملة من خطط الأعمال إلى ما قبل الافتتاح وإدارة العمليات الفندقية.
+                        </p>
+                    </div>
+                    <div class="industry-card reveal-up">
+                        <div class="industry-icon">✈️</div>
+                        <h3>السفر والسياحة</h3>
+                        <p>حلول مصممة لوكالات السفر ومنظمي الرحلات السياحية الباحثين عن التميز التشغيلي.
+                        </p>
+                    </div>
+                    <div class="industry-card reveal-up">
+                        <div class="industry-icon">🛒</div>
+                        <h3>قطاع التجزئة</h3>
+                        <p>دراسات جدوى، حلول تقنية، وعلامات تجارية لشركات التجزئة بجميع أحجامها.</p>
+                    </div>
+                    <div class="industry-card reveal-up">
+                        <div class="industry-icon">🏛️</div>
+                        <h3>الجهات الحكومية</h3>
+                        <p>بنية تحتية لتقنية المعلومات، دعم إداري، وتحسين العمليات للجهات الحكومية.
+                        </p>
+                    </div>
+                    <div class="industry-card reveal-up">
+                        <div class="industry-icon">⚡</div>
+                        <h3>شركات المرافق</h3>
+                        <p>أنظمة تقنية وإدارية لمزودي خدمات المرافق الباحثين عن عمليات حديثة وفعالة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="services section dark-section">
+            <div class="container">
+                <div class="section-label reveal-up">ماذا نقدم</div>
+                <h2 class="section-title reveal-up">Our خدمات رئيسية</h2>
+                <p class="section-desc reveal-up">حلول شاملة تغطي الاستشارات، التقنية، والتخطيط الاستراتيجي عبر جميع القطاعات التي نخدمها.</p>
+
+                <!-- الفنادق والضيافة Services -->
+                <div class="service-block reveal-up">
+                    <div class="service-block-header">
+                        <span class="service-num">01</span>
+                        <div>
+                            <h3>الفنادق والضيافة Industry</h3>
+                            <p>خدمات متكاملة لمشغلي الفنادق، المستثمرين، وشركات الإدارة.</p>
+                        </div>
+                    </div>
+                    <div class="service-pills">
+                        <span class="pill">خطة عمل الفندق</span>
+                        <span class="pill">البحث عن فنادق للإيجار</span>
+                        <span class="pill">الافتتاح التجريبي للفندق</span>
+                        <span class="pill">حلول تقنية المعلومات</span>
+                        <span class="pill">دعم المكاتب الخلفية</span>
+                        <span class="pill">العلامة التجارية والهوية المؤسسية</span>
+                        <span class="pill">إعداد الشبكات اللاسلكية</span>
+                        <span class="pill">تطبيق أنظمة إدارة علاقات العملاء</span>
+                    </div>
+                </div>
+
+                <!-- Business Plan Detail -->
+                <div class="service-detail-grid">
+                    <div class="service-detail-card reveal-up">
+                        <h4>📋 خطة عمل الفندق</h4>
+                        <p>تقدم دار الإدارة خطط أعمال شاملة لإدارة منظمة فندقية ناجحة. يمتلك مستشارونا خبرات من كبرى الفنادق في السعودية وخارجها. نجلب الأفكار وأفضل الممارسات من جميع أنحاء العالم، مطبقين تقنيات عالمية المستوى لتناسب السوق المحلي.</p>
+                    </div>
+                    <div class="service-detail-card reveal-up">
+                        <h4>🔑 البحث عن فنادق للإيجار</h4>
+                        <p>تقدم الدار خدمات استشارية للعثور على فنادق للإيجار والمساعدة في تشغيلها بسلاسة. مستشارو التأجير لدينا خبراء في الحصول على أفضل الصفقات. كما نتمتع بخبرة عملية ممتازة في الحفاظ على سير العمليات الفندقية.</p>
+                    </div>
+                </div>
+
+                <!-- Hotel Pre-Opening -->
+                <div class="service-block reveal-up" style="margin-top: 3rem;">
+                    <div class="service-block-header">
+                        <span class="service-num">02</span>
+                        <div>
+                            <h3>خدمة ما قبل الافتتاح</h3>
+                            <p>تغطي خدمة ما قبل الافتتاح القياسية من الدار التطوير الكامل للمشروع والعمليات الإدارية الناجحة.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="preopening-grid">
+                    <div class="preopening-item reveal-up"><span>✓</span> تقديم خدمات العلامة التجارية</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> إعداد مكتب ما قبل الافتتاح وتوظيف الفريق</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> إعداد ميزانية ما قبل الافتتاح</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> إعداد الهيكل التنظيمي وعدد الموظفين
+                    </div>
+                    <div class="preopening-item reveal-up"><span>✓</span> تحديد أهداف الأقسام</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> إعداد سلم الرواتب وسياسات منافع الموظفين
+                    </div>
+                    <div class="preopening-item reveal-up"><span>✓</span> تأسيس إجراءات التشغيل القياسية ومعايير جودة الخدمة
+                    </div>
+                    <div class="preopening-item reveal-up"><span>✓</span> تطوير خطة التوظيف الشاملة</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> إعداد أدلة التدريب للأقسام</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> تنظيم تدريب الموظفين</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> وضع خطة إعلانية لما قبل الافتتاح</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> تحديد مقترح حفل الافتتاح</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> إعداد دليل الموظفين</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> تحديد الميزانية السنوية</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> إجراء التشغيل التجريبي</div>
+                    <div class="preopening-item reveal-up"><span>✓</span> تجهيز حفل ما قبل الافتتاح</div>
+                </div>
+
+                <!-- قطاع التجزئة Services -->
+                <div class="service-block reveal-up" style="margin-top: 3rem;">
+                    <div class="service-block-header">
+                        <span class="service-num">03</span>
+                        <div>
+                            <h3>قطاع التجزئة</h3>
+                            <p>حلول مصممة لتمكين شركات التجزئة من الإطلاق والتوسع وبناء العلامة التجارية بفعالية.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service-pills">
+                        <span class="pill">دراسة جدوى</span>
+                        <span class="pill">حلول تقنية المعلومات</span>
+                        <span class="pill">تطوير المشارBrProjects الصغيرة</span>
+                        <span class="pill">العلامة التجارية والهوية المؤسسية</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEASIBILITY STUDY -->
+        <section id="feasibility" class="feasibility section">
+            <div class="container">
+                <div class="section-label reveal-up">التخطيط المالي</div>
+                <h2 class="section-title reveal-up">دراسة جدوى Services</h2>
+                <p class="section-desc reveal-up">نعمل على تبسيط إنشاء دراسات الجدوى لإضافة قيمة لعملية اتخاذ القرار، ودعم طلبات الموارد لاستثمارات التقنية والمشاريع الجديدة.</p>
+                <div class="feasibility-grid">
+                    <div class="feasibility-card reveal-up">
+                        <div class="feasibility-num">01</div>
+                        <h4>تبسيط اتخاذ القرارات</h4>
+                        <p>إضافة قيمة لعملية اتخاذ القرار بناءً على نتائج تخطيط وتصميم الجهة.</p>
+                    </div>
+                    <div class="feasibility-card reveal-up">
+                        <div class="feasibility-num">02</div>
+                        <h4>التحليل المالي</h4>
+                        <p>دمج صافي القيمة الحالية، معدل العائد الداخلي، وتحليل التعادل ضمن نموذج تحليل التكلفة والفائدة.</p>
+                    </div>
+                    <div class="feasibility-card reveal-up">
+                        <div class="feasibility-num">03</div>
+                        <h4>تقييم المشاريع الجديدة</h4>
+                        <p>تحديد جدوى الأعمال الجديدة أو المشاريع الجانبية من خلال تحليل شامل للسوق.</p>
+                    </div>
+                    <div class="feasibility-card reveal-up">
+                        <div class="feasibility-num">04</div>
+                        <h4>نموذج ملف مشروع جاهز للمستثمر</h4>
+                        <p>إنشاء دراسة جدوى احترافية ونموذج ملف مشروع (PPM) لعرضها على المستثمرين والبنوك لزيادة رأس المال.</p>
+                    </div>
+                    <div class="feasibility-card reveal-up">
+                        <div class="feasibility-num">05</div>
+                        <h4>دعم الاستثمار التقني</h4>
+                        <p>إدراك دور دراسة الجدوى في دعم طلبات الموارد لاستثمارات تقنية المعلومات المقترحة.</p>
+                    </div>
+                    <div class="feasibility-card reveal-up">
+                        <div class="feasibility-num">06</div>
+                        <h4>الاستفادة من الملكية الفكرية</h4>
+                        <p>إنشاء دراسة جدوى للاستفادة من ملكيتك الفكرية عالية القيمة وتحقيق أقصى عوائد منها.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORPORATE BRANDING -->
+        <section id="branding" class="branding section dark-section">
+            <div class="container">
+                <div class="branding-grid">
+                    <div class="branding-text">
+                        <div class="section-label reveal-up">هوية العلامة التجارية</div>
+                        <h2 class="section-title reveal-up">العلامة التجارية للشركات</h2>
+                        <p class="reveal-up">العلامة التجارية للشركات هي ممارسة استخدام اسم الشركة كعلامة تجارية للمنتج — في محاولة للاستفادة من قيمة العلامة التجارية للشركة لخلق وعي بالعلامة التجارية عبر مجموعة من المنتجات.</p>
+                        <p class="reveal-up">يمكن أن تؤدي العلامة التجارية للشركات إلى وفورات كبيرة في النطاق حيث يمكن استخدام حملة إعلانية واحدة لعدة منتجات. كما تسهل قبول المنتجات الجديدة لأن المشترين المحتملين على دراية بالاسم بالفعل.</p>
+                        <p class="reveal-up">يمكن أن تتضمن العلامة التجارية عدة نقاط اتصال: الشعار، خدمة العملاء، تدريب الموظفين، التغليف، الإعلانات، القرطاسية، وجودة المنتجات والخدمات.</p>
+                        <div class="branding-cta reveal-up">
+                            <a href="#contact" class="btn-primary">ابدأ رحلة علامتك التجارية</a>
+                        </div>
+                    </div>
+                    <div class="branding-touchpoints">
+                        <h4 class="reveal-up">نقاط اتصال علامتنا التجارية</h4>
+                        <div class="touchpoint reveal-up"><span class="tp-icon">🎨</span>
+                            <div><strong>تصميم الشعار</strong>
+                                <p>ابتكار شعارات تعكس هوية علامتك التجارية</p>
+                            </div>
+                        </div>
+                        <div class="touchpoint reveal-up"><span class="tp-icon">📄</span>
+                            <div><strong>القرطاسية</strong>
+                                <p>بطاقات العمل، الأوراق الرسمية، والقرطاسية الخاصة بالشركة</p>
+                            </div>
+                        </div>
+                        <div class="touchpoint reveal-up"><span class="tp-icon">📢</span>
+                            <div><strong>استراتيجية الإعلان</strong>
+                                <p>أفكار للحملات تتفاعل مع جمهورك بشكل رائع</p>
+                            </div>
+                        </div>
+                        <div class="touchpoint reveal-up"><span class="tp-icon">🤝</span>
+                            <div><strong>تجربة العملاء</strong>
+                                <p>تدريب الموظفين لتقديم خدمة متوافقة مع العلامة التجارية</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUALITY & STRATEGY -->
+        <section id="quality" class="quality section">
+            <div class="container">
+                <div class="section-label reveal-up">التزامنا</div>
+                <h2 class="section-title text-center reveal-up">الجودة والاستراتيجية</h2>
+                <div class="qs-grid">
+                    <div class="qs-card reveal-up">
+                        <div class="qs-icon">🎯</div>
+                        <h3>استراتيجيتنا</h3>
+                        <p>استراتيجيتنا لدعم العملاء هي العمل عن كثب كفريق مدمج. الهدف هو جعل العميل يشعر بأن لديه دعم قوي.</p>
+                        <p>سواء كنت شركة صغيرة أو متعددة الجنسيات، يمكننا المساعدة في خلق فرص جديدة وتعزيز قيمتك السوقية. الهدف هو مطابقة أهدافك مع أفضل استراتيجية فنية واقتصادية وطويلة الأجل لشركتك.</p>
+                    </div>
+                    <div class="qs-card qs-card-gold reveal-up">
+                        <div class="qs-icon">⭐</div>
+                        <h3>جودتنا</h3>
+                        <p>ثقافة الجودة لدينا هي رحلة نحو التميز مع الابتكار والتأسيس المؤسسي والنزاهة في عملياتنا. في دار الإدارة، تعتبر الجودة دافعاً رئيسياً في جميع الوظائف التي نؤديها.
+                        </p>
+                        <ul class="quality-list">
+                            <li>تعريف واضح للعمليات</li>
+                            <li>توثيق مفصل — مواصفات المشروع، أدلة التدريب، سجلات العمل</li>
+                            <li>مجموعة مستقلة لضمان الجودة والاعتماد مع خطط اختبار محددة</li>
+                            <li>قياس إحصائي لمعايير الجودة</li>
+                            <li>واجهة دعم فني لضمان رضا العملاء</li>
+                            <li>تكرار العمليات عبر جميع المشاريع</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- CLIENTS -->
+        <section id="clients" class="clients section dark-section">
+            <div class="container">
+                <div class="section-label reveal-up">يثق بنا</div>
+                <h2 class="section-title text-center reveal-up">عملاؤنا</h2>
+                <p class="section-desc text-center reveal-up">مجموعة فخورة من المنظمات المحلية والدولية التي تثق بدار الإدارة لتقديم التميز.</p>
+
+                <h4 class="clients-sub reveal-up">عملاء دوليين</h4>
+                <div class="marquee-wrapper reveal-up">
+                    <div class="marquee-track">
+                        <div class="logo-card"><img src="images/logo_discovery_channel.png" alt="Discovery Channel">
+                        </div>
+                        <div class="logo-card"><img src="images/logo_bank_of_america.png" alt="Bank of America"></div>
+                        <div class="logo-card"><img src="images/logo_usaid.png" alt="USAID"></div>
+                        <div class="logo-card"><img src="images/logo_people_arts.png" alt="People + Arts"></div>
+                        <div class="logo-card"><img src="images/logo_abn_amro.png" alt="ABN AMRO"></div>
+                        <div class="logo-card"><img src="images/logo_animal_planet.png" alt="Animal Planet"></div>
+                        <div class="logo-card"><img src="images/logo_itc_limited.png" alt="ITC Limited"></div>
+                        <div class="logo-card"><img src="images/logo_discovery_home.png" alt="Discovery Home Health">
+                        </div>
+                        <div class="logo-card"><img src="images/logo_hcl.png" alt="HCL Technologies"></div>
+                        <div class="logo-card"><img src="images/logo_discovery_channel.png" alt="Discovery Channel">
+                        </div>
+                        <div class="logo-card"><img src="images/logo_bank_of_america.png" alt="Bank of America"></div>
+                        <div class="logo-card"><img src="images/logo_usaid.png" alt="USAID"></div>
+                        <div class="logo-card"><img src="images/logo_people_arts.png" alt="People + Arts"></div>
+                        <div class="logo-card"><img src="images/logo_abn_amro.png" alt="ABN AMRO"></div>
+                        <div class="logo-card"><img src="images/logo_animal_planet.png" alt="Animal Planet"></div>
+                        <div class="logo-card"><img src="images/logo_itc_limited.png" alt="ITC Limited"></div>
+                        <div class="logo-card"><img src="images/logo_discovery_home.png" alt="Discovery Home Health">
+                        </div>
+                        <div class="logo-card"><img src="images/logo_hcl.png" alt="HCL Technologies"></div>
+                    </div>
+                </div>
+
+                <h4 class="clients-sub reveal-up" style="margin-top: 4rem;">عملاء محليون من السعودية</h4>
+                <div class="local-clients-grid">
+                    <div class="logo-card-lg reveal-up">
+                        <img src="images/logo_dyar_hotels.png" alt="Dyar Hotels Resorts">
+                        <span>Dyar Hotels &amp; Resorts</span>
+                    </div>
+                    <div class="logo-card-lg reveal-up">
+                        <img src="images/logo_dar_altaqwa.png" alt="Dar Al Taqwa Hotel Madinah">
+                        <span>Dar Al Taqwa Hotel &mdash; Madinah</span>
+                    </div>
+                    <div class="logo-card-lg reveal-up">
+                        <img src="images/logo_riyadh_palace.png" alt="Riyadh Palace Hotel">
+                        <span>Riyadh Palace Hotel &#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <div class="logo-card-lg reveal-up">
+                        <img src="images/logo_aramas.png" alt="Aramas Hotels Resorts">
+                        <span>Aramas Hotels &amp; Resorts</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- ═══ PRESENCE SECTION ═══ -->
+        <section id="presence" class="presence-section">
+
+            <!-- Layer 1: Starfield canvas -->
+            <canvas id="starCanvas"></canvas>
+
+            <!-- Layer 2: Madinah Skyline SVG -->
+            <div class="skyline-wrap">
+                <svg id="skylineSVG" viewBox="0 0 1440 320" preserveAspectRatio="xMidYMax meet"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="horizGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="rgba(201,168,76,0.08)" />
+                            <stop offset="100%" stop-color="rgba(201,168,76,0)" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- ── Left small buildings ── -->
+                    <rect x="30" y="250" width="28" height="70" fill="#0a0d16" />
+                    <rect x="62" y="232" width="18" height="88" fill="#0a0d16" />
+                    <rect x="84" y="258" width="22" height="62" fill="#0a0d16" />
+                    <rect x="110" y="240" width="16" height="80" fill="#0a0d16" />
+                    <rect x="130" y="260" width="30" height="60" fill="#0a0d16" />
+                    <rect x="164" y="245" width="20" height="75" fill="#0a0d16" />
+                    <rect x="190" y="252" width="26" height="68" fill="#0a0d16" />
+                    <rect x="220" y="235" width="18" height="85" fill="#0a0d16" />
+                    <rect x="244" y="256" width="22" height="64" fill="#0a0d16" />
+                    <rect x="270" y="242" width="32" height="78" fill="#0a0d16" />
+                    <rect x="308" y="255" width="20" height="65" fill="#0a0d16" />
+                    <rect x="335" y="238" width="16" height="82" fill="#0a0d16" />
+                    <rect x="358" y="248" width="28" height="72" fill="#0a0d16" />
+                    <rect x="392" y="260" width="18" height="60" fill="#0a0d16" />
+                    <!-- taller accent buildings left -->
+                    <rect x="415" y="210" width="22" height="110" fill="#0a0d16" />
+                    <rect x="442" y="222" width="26" height="98" fill="#0a0d16" />
+                    <rect x="472" y="215" width="18" height="105" fill="#0a0d16" />
+                    <rect x="496" y="230" width="30" height="90" fill="#0a0d16" />
+                    <rect x="532" y="200" width="20" height="120" fill="#0a0d16" />
+                    <rect x="558" y="220" width="24" height="100" fill="#0a0d16" />
+                    <rect x="588" y="236" width="18" height="84" fill="#0a0d16" />
+                    <rect x="612" y="218" width="28" height="102" fill="#0a0d16" />
+
+                    <!-- ── CENTRAL CLUSTER — Al-Masjid An-Nabawi inspired ── -->
+                    <!-- Ground base of complex -->
+                    <rect x="620" y="260" width="200" height="60" fill="#0a0d16" />
+
+                    <!-- Outer tall minarets (left & right) -->
+                    <!-- Left outer minaret -->
+                    <rect x="635" y="120" width="12" height="140" fill="#0a0d16" />
+                    <!-- Left outer minaret balcony rings -->
+                    <rect x="631" y="170" width="20" height="3" fill="#0a0d16" />
+                    <rect x="631" y="210" width="20" height="3" fill="#0a0d16" />
+                    <!-- Left outer minaret tip (spire) -->
+                    <polygon points="641,120 648,107 635,120" fill="#0a0d16" />
+                    <!-- Crescent on left minaret -->
+                    <path d="M641,112 A4,4 0 1,1 641,104 A2.5,2.5 0 1,0 641,112 Z" fill="#0a0d16" />
+
+                    <!-- Right outer minaret -->
+                    <rect x="793" y="120" width="12" height="140" fill="#0a0d16" />
+                    <rect x="789" y="170" width="20" height="3" fill="#0a0d16" />
+                    <rect x="789" y="210" width="20" height="3" fill="#0a0d16" />
+                    <polygon points="799,120 806,107 793,120" fill="#0a0d16" />
+                    <path d="M799,112 A4,4 0 1,1 799,104 A2.5,2.5 0 1,0 799,112 Z" fill="#0a0d16" />
+
+                    <!-- Inner minarets (left & right) -->
+                    <rect x="667" y="148" width="10" height="112" fill="#0a0d16" />
+                    <rect x="664" y="195" width="16" height="3" fill="#0a0d16" />
+                    <polygon points="672,148 678,137 666,148" fill="#0a0d16" />
+
+                    <rect x="763" y="148" width="10" height="112" fill="#0a0d16" />
+                    <rect x="760" y="195" width="16" height="3" fill="#0a0d16" />
+                    <polygon points="768,148 774,137 762,148" fill="#0a0d16" />
+
+                    <!-- Mosque main body -->
+                    <rect x="690" y="220" width="60" height="40" fill="#0a0d16" />
+
+                    <!-- Side colonnades -->
+                    <rect x="660" y="240" width="30" height="20" fill="#0a0d16" />
+                    <rect x="750" y="240" width="30" height="20" fill="#0a0d16" />
+
+                    <!-- Central dome (main) -->
+                    <ellipse cx="720" cy="222" rx="45" ry="38" fill="#0a0d16" />
+                    <!-- Side smaller domes -->
+                    <ellipse cx="686" cy="240" rx="18" ry="14" fill="#0a0d16" />
+                    <ellipse cx="754" cy="240" rx="18" ry="14" fill="#0a0d16" />
+
+                    <!-- ── Right mid buildings ── -->
+                    <rect x="840" y="228" width="24" height="92" fill="#0a0d16" />
+                    <rect x="868" y="242" width="18" height="78" fill="#0a0d16" />
+                    <rect x="892" y="215" width="26" height="105" fill="#0a0d16" />
+                    <rect x="922" y="238" width="20" height="82" fill="#0a0d16" />
+                    <rect x="948" y="250" width="28" height="70" fill="#0a0d16" />
+                    <rect x="982" y="235" width="16" height="85" fill="#0a0d16" />
+                    <rect x="1002" y="252" width="22" height="68" fill="#0a0d16" />
+                    <rect x="1030" y="244" width="18" height="76" fill="#0a0d16" />
+                    <rect x="1054" y="258" width="26" height="62" fill="#0a0d16" />
+                    <rect x="1086" y="240" width="20" height="80" fill="#0a0d16" />
+                    <rect x="1112" y="255" width="16" height="65" fill="#0a0d16" />
+                    <rect x="1132" y="248" width="28" height="72" fill="#0a0d16" />
+                    <rect x="1164" y="260" width="18" height="60" fill="#0a0d16" />
+                    <rect x="1190" y="243" width="22" height="77" fill="#0a0d16" />
+                    <rect x="1218" y="255" width="30" height="65" fill="#0a0d16" />
+                    <rect x="1254" y="240" width="16" height="80" fill="#0a0d16" />
+                    <rect x="1276" y="252" width="24" height="68" fill="#0a0d16" />
+                    <rect x="1306" y="260" width="20" height="60" fill="#0a0d16" />
+                    <rect x="1332" y="248" width="28" height="72" fill="#0a0d16" />
+                    <rect x="1366" y="256" width="18" height="64" fill="#0a0d16" />
+                    <rect x="1394" y="242" width="22" height="78" fill="#0a0d16" />
+                    <rect x="1420" y="260" width="20" height="60" fill="#0a0d16" />
+
+                    <!-- ── Palm trees ── -->
+                    <!-- Palm: trunk + 5 frond ellipses fanned out -->
+                    <!-- Palm 1 at x=135 -->
+                    <rect x="143" y="250" width="5" height="45" fill="#0a0d16" />
+                    <ellipse cx="145" cy="248" rx="16" ry="5" transform="rotate(-35,145,248)" fill="#0a0d16" />
+                    <ellipse cx="145" cy="248" rx="16" ry="5" transform="rotate(-10,145,248)" fill="#0a0d16" />
+                    <ellipse cx="145" cy="248" rx="16" ry="5" transform="rotate(15,145,248)" fill="#0a0d16" />
+                    <ellipse cx="145" cy="248" rx="16" ry="5" transform="rotate(40,145,248)" fill="#0a0d16" />
+                    <ellipse cx="145" cy="248" rx="14" ry="5" transform="rotate(-60,145,248)" fill="#0a0d16" />
+
+                    <!-- Palm 2 at x=510 -->
+                    <rect x="518" y="230" width="5" height="50" fill="#0a0d16" />
+                    <ellipse cx="520" cy="228" rx="16" ry="5" transform="rotate(-40,520,228)" fill="#0a0d16" />
+                    <ellipse cx="520" cy="228" rx="16" ry="5" transform="rotate(-12,520,228)" fill="#0a0d16" />
+                    <ellipse cx="520" cy="228" rx="16" ry="5" transform="rotate(14,520,228)" fill="#0a0d16" />
+                    <ellipse cx="520" cy="228" rx="14" ry="5" transform="rotate(42,520,228)" fill="#0a0d16" />
+                    <ellipse cx="520" cy="228" rx="14" ry="5" transform="rotate(-62,520,228)" fill="#0a0d16" />
+
+                    <!-- Palm 3 at x=1050 -->
+                    <rect x="1058" y="235" width="5" height="48" fill="#0a0d16" />
+                    <ellipse cx="1060" cy="233" rx="16" ry="5" transform="rotate(-38,1060,233)" fill="#0a0d16" />
+                    <ellipse cx="1060" cy="233" rx="16" ry="5" transform="rotate(-10,1060,233)" fill="#0a0d16" />
+                    <ellipse cx="1060" cy="233" rx="16" ry="5" transform="rotate(16,1060,233)" fill="#0a0d16" />
+                    <ellipse cx="1060" cy="233" rx="14" ry="5" transform="rotate(44,1060,233)" fill="#0a0d16" />
+
+                    <!-- Palm 4 at x=1300 -->
+                    <rect x="1308" y="240" width="5" height="45" fill="#0a0d16" />
+                    <ellipse cx="1310" cy="238" rx="16" ry="5" transform="rotate(-35,1310,238)" fill="#0a0d16" />
+                    <ellipse cx="1310" cy="238" rx="16" ry="5" transform="rotate(-8,1310,238)" fill="#0a0d16" />
+                    <ellipse cx="1310" cy="238" rx="16" ry="5" transform="rotate(18,1310,238)" fill="#0a0d16" />
+                    <ellipse cx="1310" cy="238" rx="14" ry="5" transform="rotate(45,1310,238)" fill="#0a0d16" />
+
+                    <!-- Ground horizon glow -->
+                    <rect x="0" y="288" width="1440" height="20" fill="url(#horizGlow)" />
+                    <!-- Golden horizon line -->
+                    <rect x="0" y="299" width="1440" height="1" fill="rgba(201,168,76,0.15)" />
+                    <!-- Ground fill -->
+                    <rect x="0" y="300" width="1440" height="20" fill="#0a0d16" />
+                </svg>
+            </div>
+
+            <!-- Layer 3: Ground fog -->
+            <div class="presence-fog"></div>
+
+            <!-- Layer 4: Content -->
+            <div class="presence-content container">
+                <div class="presence-center"
+                    style="display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 10; margin-bottom: 4rem;">
+                    <span class="section-label">تواجدنا</span>
+                    <h2 class="section-title">
+                        جذور في <span class="gold">المدينة المنورة</span>،<br>
+                        ونصل للعالم
+                    </h2>
+                    <p class="presence-tagline" style="max-width: 600px; margin: 0 auto 2rem; color: var(--grey-2);">
+                        من قلب شبه الجزيرة العربية، تخدم دار الإدارة عملاءها في جميع أنحاء الشرق الأوسط وما وراءه.
+                    </p>
+
+                    <div class="globe-wrap"
+                        style="width: 100%; max-width: 700px; margin: 0 auto; position: relative; height: 700px; display: flex; justify-content: center; align-items: center; z-index: 20;"
+                        id="globeVizWrap">
+                        <div id="globeViz" style="cursor: grab;"></div>
+                    </div>
+
+                    <div class="presence-reach-stats"
+                        style="display: flex; gap: 3rem; justify-content: center; margin-top: 3rem; background: rgba(0,0,0,0.5); padding: 1.5rem 3rem; border-radius: 100px; border: 1px solid rgba(201,168,76,0.2);">
+                        <div class="prs-item" style="text-align: center;">
+                            <span class="prs-num"
+                                style="display: block; font-family: var(--font-display); font-size: 2.5rem; font-weight: bold; color: var(--gold); line-height: 1;">5</span>
+                            <span class="prs-lbl"
+                                style="font-size: 0.8rem; color: var(--grey-2); text-transform: uppercase; letter-spacing: 0.1em;">دول<br>نصل إليها</span>
+                        </div>
+                        <div class="prs-sep" style="width: 1px; background: rgba(255,255,255,0.1);"></div>
+                        <div class="prs-item" style="text-align: center;">
+                            <span class="prs-num"
+                                style="display: block; font-family: var(--font-display); font-size: 2.5rem; font-weight: bold; color: var(--gold); line-height: 1;">9+</span>
+                            <span class="prs-lbl"
+                                style="font-size: 0.8rem; color: var(--grey-2); text-transform: uppercase; letter-spacing: 0.1em;">مدن<br>العملاء</span>
+                        </div>
+                        <div class="prs-sep" style="width: 1px; background: rgba(255,255,255,0.1);"></div>
+                        <div class="prs-item" style="text-align: center;">
+                            <span class="prs-num"
+                                style="display: block; font-family: var(--font-display); font-size: 2.5rem; font-weight: bold; color: var(--gold); line-height: 1;">1</span>
+                            <span class="prs-lbl"
+                                style="font-size: 0.8rem; color: var(--grey-2); text-transform: uppercase; letter-spacing: 0.1em;">مدينة<br>المنشأ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="contact-form-grid"
+                style="margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <div class="cf-info">
+                    <div class="section-label reveal-up">تواصل معنا</div>
+                    <h2 class="section-title reveal-up">ابدأ محادثة</h2>
+                    <p class="reveal-up" style="color:var(--grey-2);line-height:1.8;margin-bottom:2rem;">سواء كنت بحاجة إلى استشارة فندقية، دراسة جدوى، بنية تحتية لتقنية المعلومات، أو هوية تجارية — فريقنا مستعد لتقديم حلول عالمية المستوى مصممة خصيصاً لاحتياجاتك.</p>
+                    <div class="cf-contact-item reveal-up">
+                        <span class="cf-icon">📍</span>
+                        <p>المدينة المنورة<br>حي الروابي<br>المملكة العربية السعودية</p>
+                    </div>
+                    <div class="cf-contact-item reveal-up">
+                        <span class="cf-icon">📞</span>
+                        <p><a href="tel:+966503139139">+966 50 313 9139</a></p>
+                    </div>
+                    <div class="cf-contact-item reveal-up">
+                        <span class="cf-icon">✉️</span>
+                        <p><a href="mailto:info@hom.com.sa">info@hom.com.sa</a></p>
+                    </div>
+                </div>
+                <div class="cf-form reveal-up">
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="cf-name" placeholder=" " required>
+                            <label for="cf-name">الاسم الكامل</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="cf-company" placeholder=" " required>
+                            <label for="cf-company">الشركة</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="cf-email" placeholder=" " required>
+                            <label for="cf-email">البريد الإلكتروني</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="cf-phone" placeholder=" ">
+                            <label for="cf-phone">رقم الهاتف</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="cf-service">
+                                <option value="" disabled selected></option>
+                                <option>Hotel Consultancy</option>
+                                <option>خطة عمل الفندق</option>
+                                <option>الافتتاح التجريبي للفندق</option>
+                                <option>دراسة جدوى</option>
+                                <option>حلول تقنية المعلومات</option>
+                                <option>العلامة التجارية للشركات</option>
+                                <option>أخرى</option>
+                            </select>
+                            <label for="cf-service" class="select-label">الخدمة المطلوبة</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="cf-message" rows="4" placeholder=" "></textarea>
+                            <label for="cf-message">رسالتك</label>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit" id="cf-submit">
+                            <span class="btn-text">إرسال الرسالة</span>
+                            <span class="btn-spinner" style="display:none">●●●</span>
+                        </button>
+                        <div class="cf-success" id="cf-success" style="display:none">
+                            <div class="success-icon">✓</div>
+                            <p>شكراً لك! سنتواصل معك قريباً.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap">
+                        <img src="images/hom_official_logo-removebg-preview.png" alt="House of Management Official Logo"
+                            class="footer-logo-img">
+                    </div>
+                    <p>حلول مبتكرة لكل القطاعات — مدعومة بالضيافة العربية والخبرات العالمية.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>روابط سريعة</h5>
+                    <a href="#about">عن الدار</a>
+                    <a href="#industries">القطاعات</a>
+                    <a href="#services">الخدمات</a>
+                    <a href="#feasibility">دراسة جدوى</a>
+                    <a href="#branding">العلامة التجارية للشركات</a>
+                    <a href="#quality">الجودة والاستراتيجية</a>
+                    <a href="#clients">عملاؤنا</a>
+                </div>
+                <div class="footer-contact">
+                    <h5>تواصل معنا</h5>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <p>Madinah<br>Al-Rawabi District<br>المملكة العربية السعودية</p>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <p>
+                            <a href="tel:+966503139139">+966 50 313 9139</a>
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <p><a href="mailto:info@hom.com.sa">info@hom.com.sa</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <span>🌐</span>
+                        <p><a href="http://www.hom.com.sa">www.hom.com.sa</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 دار الإدارة. جميع الحقوق محفوظة. | تصميم الموقع بواسطة <a
+                        href="https://logicity.in" target="_blank"
+                        style="color: var(--gold); text-decoration: none;">logicity.in</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="scroll-progress"></div>
+    <div id="cursor-circle"></div>
+    <div id="cursor-dot"></div>
+    <div class="dot-nav" id="dot-nav"></div>
+
+    <!-- LAYER 2 — Update Modal Popup -->
+    <div class="update-modal-overlay" id="updateOverlay">
+        <div class="update-modal" id="updateModal" role="dialog" aria-label="الشركة Updates">
+            <div class="update-modal-topbar"></div>
+            <div class="update-modal-inner">
+                <div class="update-modal-head">
+                    <div class="update-modal-badge">
+                        <span class="ann-live-dot"></span>
+                        <span>الشركة Updates</span>
+                    </div>
+                    <button class="update-modal-x" id="updateModalClose">&#x2715;</button>
+                </div>
+                <h3 class="update-modal-title">ما الجديد في الدار</h3>
+                <p class="update-modal-sub">أحدث الإعلانات من دار الإدارة</p>
+                <div class="update-list">
+                    <div class="update-item">
+                        <span class="update-item-icon">&#x1F3C6;</span>
+                        <div class="update-item-body">
+                            <p class="update-item-text"><strong>جائزة:</strong> تصنيف الدار كأفضل مستشار ضيافة —
+                                قمة الضيافة السعودية 2024</p>
+                            <span class="update-item-time">2 days ago</span>
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-item-icon">&#x1F91D;</span>
+                        <div class="update-item-body">
+                            <p class="update-item-text"><strong>شراكة:</strong> توقيع صفقة استراتيجية مع فنادق ومنتجعات الديار</p>
+                            <span class="update-item-time">1 week ago</span>
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-item-icon">&#x1F3E8;</span>
+                        <div class="update-item-body">
+                            <p class="update-item-text"><strong>مشروع جديد:</strong> إدارة ما قبل الافتتاح لـ 3 فنادق في المدينة جارية الآن</p>
+                            <span class="update-item-time">2 weeks ago</span>
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-item-icon">&#x1F4CB;</span>
+                        <div class="update-item-body">
+                            <p class="update-item-text"><strong>توظيف:</strong> وظائف كبير مستشارين ومدير تقنية معلومات متاحة — قدم عبر info@hom.com.sa</p>
+                            <span class="update-item-time">3 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="update-modal-footer">
+                    <button class="update-dont-show" id="updateDontShow">لا تظهر هذا مجدداً</button>
+                    <a href="#about" class="update-modal-cta" id="updateCTA">عرض جميع التحديثات &#x2190;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Activity Toast -->
+    <div class="live-toast-container" id="liveToastContainer">
+        <div class="live-toast" id="liveToast">
+            <div class="lt-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div class="lt-content">
+                <div class="lt-title" id="ltTitle">Someone from Riyadh</div>
+                <div class="lt-desc" id="ltDesc">just downloaded the Company Profile</div>
+                <div class="lt-time" id="ltTime">Just now</div>
+            </div>
+            <button class="lt-close" id="ltClose">&times;</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
