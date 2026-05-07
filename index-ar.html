@@ -146,6 +146,12 @@ header {
   font-weight: 400;
 }
 
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
 .header-link {
   font-family: var(--font-sans);
   color: var(--color-muted);
@@ -157,6 +163,208 @@ header {
 }
 
 .header-link:hover { color: var(--color-gold); }
+
+.team-access {
+  background: transparent;
+  border: 1px solid var(--color-line);
+  color: var(--color-muted);
+  font-family: var(--font-arabic);
+  font-size: 0.78rem;
+  font-weight: 400;
+  padding: 0.55rem 0.95rem;
+  border-radius: 100px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: border-color var(--duration-fast) ease, color var(--duration-fast) ease, background var(--duration-fast) ease;
+}
+
+.team-access svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  fill: none;
+}
+
+.team-access:hover {
+  border-color: var(--color-gold-dim);
+  color: var(--color-gold);
+  background: oklch(78% 0.115 78 / 0.06);
+}
+
+.team-access:focus-visible {
+  outline: 1px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+.access-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.access-modal[hidden] { display: none; }
+
+.access-backdrop {
+  position: absolute;
+  inset: 0;
+  background: oklch(8% 0.005 75 / 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  opacity: 0;
+  animation: backdrop-in 350ms var(--ease) forwards;
+}
+
+@keyframes backdrop-in { to { opacity: 1; } }
+
+.access-card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem 2rem 2rem;
+  border: 1px solid var(--color-line);
+  background: oklch(15% 0.006 78);
+  text-align: center;
+  transform: scale(0.95) translateY(12px);
+  opacity: 0;
+  animation: card-in 700ms var(--ease) 80ms forwards;
+}
+
+.access-card.is-shaking { animation: shake 420ms cubic-bezier(0.36, 0.07, 0.19, 0.97); }
+
+@keyframes card-in {
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+@keyframes shake {
+  10%, 90% { transform: translateX(-2px); }
+  20%, 80% { transform: translateX(4px); }
+  30%, 50%, 70% { transform: translateX(-7px); }
+  40%, 60% { transform: translateX(7px); }
+}
+
+.access-close {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.7rem;
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+  transition: color var(--duration-fast) ease;
+}
+
+.access-close:hover { color: var(--color-text); }
+
+.access-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold-dim);
+  margin-bottom: 1.4rem;
+  background: oklch(78% 0.115 78 / 0.06);
+}
+
+.access-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-gold);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.access-title {
+  font-family: var(--font-arabic);
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-text);
+}
+
+.access-desc {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  max-width: 22rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.access-form { display: flex; flex-direction: column; gap: 0.85rem; }
+
+.access-input {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  background: oklch(11% 0.005 75);
+  border: 1px solid var(--color-line);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+  outline: none;
+  direction: ltr;
+  transition: border-color var(--duration-fast) ease;
+}
+
+.access-input:focus { border-color: var(--color-gold-dim); }
+
+.access-input::placeholder {
+  color: var(--color-muted);
+  font-family: var(--font-arabic);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+}
+
+.access-error {
+  font-size: 0.82rem;
+  color: oklch(72% 0.15 30);
+  margin: -0.3rem 0 -0.2rem;
+  min-height: 1rem;
+}
+
+.access-error[hidden] { display: none; }
+
+.access-submit {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  background: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  color: oklch(15% 0.005 75);
+  font-family: var(--font-arabic);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--duration-fast) ease, transform var(--duration-fast) var(--ease);
+}
+
+.access-submit:hover { background: oklch(82% 0.115 78); }
+.access-submit:active { transform: scale(0.985); }
+
+.access-submit.is-success {
+  background: oklch(76% 0.13 145);
+  border-color: oklch(76% 0.13 145);
+}
+
+.access-foot {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
 
 main {
   flex: 1;
@@ -403,10 +611,13 @@ footer .copy { font-family: var(--font-sans); direction: ltr; }
     padding-right: var(--space-md);
   }
 
-  header { gap: 0.75rem; }
+  header { gap: 0.75rem; flex-wrap: wrap; }
+  .header-nav { gap: 0.75rem; }
   .brand-name { font-size: 0.8rem; }
   .brand-name em { display: none; }
   .header-link { font-size: 0.7rem; }
+  .team-access { padding: 0.45rem 0.7rem; font-size: 0.7rem; }
+  .access-card { padding: 2rem 1.4rem 1.6rem; }
 
   main { padding-top: clamp(1.5rem, 6vw, 2.5rem); padding-bottom: clamp(1.5rem, 6vw, 2.5rem); }
 
@@ -456,7 +667,16 @@ footer .copy { font-family: var(--font-sans); direction: ltr; }
       <em>المدينة المنورة · المملكة العربية السعودية</em>
     </div>
   </div>
-  <a href="mailto:info@hom.com.sa" class="header-link">info@hom.com.sa</a>
+  <nav class="header-nav" aria-label="روابط الموقع">
+    <a href="mailto:info@hom.com.sa" class="header-link">info@hom.com.sa</a>
+    <button type="button" class="team-access" aria-haspopup="dialog" aria-controls="access-modal">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="5" y="11" width="14" height="10" rx="1.5"/>
+        <path d="M8 11V8a4 4 0 0 1 8 0v3"/>
+      </svg>
+      دخول الفريق
+    </button>
+  </nav>
 </header>
 
 <main>
@@ -503,6 +723,36 @@ footer .copy { font-family: var(--font-sans); direction: ltr; }
   <span class="copy">&copy; 2026 House of Management</span>
 </footer>
 
+<div class="access-modal" id="access-modal" role="dialog" aria-modal="true" aria-labelledby="access-title" hidden>
+  <div class="access-backdrop" data-close></div>
+  <div class="access-card">
+    <button type="button" class="access-close" aria-label="إغلاق" data-close>&times;</button>
+    <div class="access-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <rect x="5" y="11" width="14" height="10" rx="1.5"/>
+        <path d="M8 11V8a4 4 0 0 1 8 0v3"/>
+        <circle cx="12" cy="16" r="1.2" fill="currentColor" stroke="none"/>
+      </svg>
+    </div>
+    <h2 class="access-title" id="access-title">دخول الفريق</h2>
+    <p class="access-desc">أدخلوا كلمة المرور الخاصة بالفريق لمعاينة الموقع قيد التطوير.</p>
+    <form class="access-form" novalidate>
+      <input
+        type="password"
+        class="access-input"
+        placeholder="كلمة المرور"
+        autocomplete="off"
+        autocapitalize="none"
+        autocorrect="off"
+        spellcheck="false"
+        aria-label="كلمة مرور الفريق">
+      <p class="access-error" role="alert" hidden>كلمة المرور غير صحيحة. حاولوا مرة أخرى.</p>
+      <button type="submit" class="access-submit">متابعة</button>
+    </form>
+    <p class="access-foot">معاينة داخلية · هاوس أوف مانجمنت</p>
+  </div>
+</div>
+
 <script>
   (function () {
     var body = document.body;
@@ -524,6 +774,65 @@ footer .copy { font-family: var(--font-sans); direction: ltr; }
     }
 
     requestAnimationFrame(function () { body.classList.add('ready'); });
+
+    var modal    = document.getElementById('access-modal');
+    var openBtn  = document.querySelector('.team-access');
+    var card     = modal.querySelector('.access-card');
+    var form     = modal.querySelector('.access-form');
+    var input    = modal.querySelector('.access-input');
+    var errorEl  = modal.querySelector('.access-error');
+    var submit   = modal.querySelector('.access-submit');
+    var submitDefault = submit.textContent;
+    var lastFocus = null;
+
+    var PASSCODE = 'logicity.in';
+    var TARGET   = 'site-ar.html';
+
+    function open() {
+      lastFocus = document.activeElement;
+      modal.hidden = false;
+      document.documentElement.style.overflow = 'hidden';
+      setTimeout(function () { input.focus(); }, 240);
+    }
+
+    function close() {
+      modal.hidden = true;
+      document.documentElement.style.overflow = '';
+      input.value = '';
+      errorEl.hidden = true;
+      submit.textContent = submitDefault;
+      submit.classList.remove('is-success');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    openBtn.addEventListener('click', open);
+
+    modal.addEventListener('click', function (e) {
+      if (e.target.hasAttribute('data-close')) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.hidden) close();
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var val = (input.value || '').trim().toLowerCase();
+      if (val === PASSCODE) {
+        errorEl.hidden = true;
+        submit.textContent = 'تم منح الوصول';
+        submit.classList.add('is-success');
+        try { localStorage.setItem('hom_team_access', 'granted'); } catch (_) {}
+        setTimeout(function () { window.location.href = TARGET; }, 650);
+      } else {
+        errorEl.hidden = false;
+        card.classList.remove('is-shaking');
+        void card.offsetWidth;
+        card.classList.add('is-shaking');
+        input.value = '';
+        input.focus();
+      }
+    });
   })();
 </script>
 
