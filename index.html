@@ -20,61 +20,6 @@
 
 <body>
 
-    <!-- LAYER 1 — Announcement Ticker Bar -->
-    <div class="ann-bar" id="annBar">
-        <div class="ann-bar-live">
-            <span class="ann-live-dot"></span>
-            <span class="ann-live-label">LIVE</span>
-        </div>
-        <div class="ann-ticker-viewport">
-            <div class="ann-ticker-track" id="annTickerTrack">
-                <span class="ann-tick-item">
-                    <span class="ann-tick-tag tag-new">NEW</span>
-                    HOM launches Hotel Pre-Opening services for 3 new properties in Madinah Munawwara
-                    <span class="ann-tick-sep">◆</span>
-                </span>
-                <span class="ann-tick-item">
-                    <span class="ann-tick-tag tag-award">AWARD</span>
-                    HOM ranked Top Management Consultancy — KSA Hospitality Summit 2024
-                    <span class="ann-tick-sep">◆</span>
-                </span>
-                <span class="ann-tick-item">
-                    <span class="ann-tick-tag tag-partner">PARTNER</span>
-                    New strategic partnership signed with Dyar Hotels &amp; Resorts
-                    <span class="ann-tick-sep">◆</span>
-                </span>
-                <span class="ann-tick-item">
-                    <span class="ann-tick-tag tag-hire">HIRING</span>
-                    HOM is expanding — Senior Hotel Consultant positions now open in Madinah
-                    <span class="ann-tick-sep">◆</span>
-                </span>
-                <!-- Duplicate for seamless loop -->
-                <span class="ann-tick-item">
-                    <span class="ann-tick-tag tag-new">NEW</span>
-                    HOM launches Hotel Pre-Opening services for 3 new properties in Madinah Munawwara
-                    <span class="ann-tick-sep">◆</span>
-                </span>
-                <span class="ann-tick-item">
-                    <span class="ann-tick-tag tag-award">AWARD</span>
-                    HOM ranked Top Management Consultancy — KSA Hospitality Summit 2024
-                    <span class="ann-tick-sep">◆</span>
-                </span>
-                <span class="ann-tick-item">
-                    <span class="ann-tick-tag tag-partner">PARTNER</span>
-                    New strategic partnership signed with Dyar Hotels &amp; Resorts
-                    <span class="ann-tick-sep">◆</span>
-                </span>
-                <span class="ann-tick-item">
-                    <span class="ann-tick-tag tag-hire">HIRING</span>
-                    HOM is expanding — Senior Hotel Consultant positions now open in Madinah
-                    <span class="ann-tick-sep">◆</span>
-                </span>
-            </div>
-        </div>
-        <button class="ann-bar-close" id="annBarClose" aria-label="Close announcement bar">&#x2715;</button>
-    </div>
-
-
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
@@ -950,77 +895,6 @@
     <div id="cursor-circle"></div>
     <div id="cursor-dot"></div>
     <div class="dot-nav" id="dot-nav"></div>
-
-    <!-- LAYER 2 — Update Modal Popup -->
-    <div class="update-modal-overlay" id="updateOverlay">
-        <div class="update-modal" id="updateModal" role="dialog" aria-label="Company Updates">
-            <div class="update-modal-topbar"></div>
-            <div class="update-modal-inner">
-                <div class="update-modal-head">
-                    <div class="update-modal-badge">
-                        <span class="ann-live-dot"></span>
-                        <span>Company Updates</span>
-                    </div>
-                    <button class="update-modal-x" id="updateModalClose">&#x2715;</button>
-                </div>
-                <h3 class="update-modal-title">What's New at HOM</h3>
-                <p class="update-modal-sub">Latest announcements from House of Management</p>
-                <div class="update-list">
-                    <div class="update-item">
-                        <span class="update-item-icon">&#x1F3C6;</span>
-                        <div class="update-item-body">
-                            <p class="update-item-text"><strong>Award:</strong> HOM named Top Hospitality Consultant —
-                                KSA Hospitality Summit 2024</p>
-                            <span class="update-item-time">2 days ago</span>
-                        </div>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-item-icon">&#x1F91D;</span>
-                        <div class="update-item-body">
-                            <p class="update-item-text"><strong>Partnership:</strong> Strategic deal signed with Dyar
-                                Hotels &amp; Resorts</p>
-                            <span class="update-item-time">1 week ago</span>
-                        </div>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-item-icon">&#x1F3E8;</span>
-                        <div class="update-item-body">
-                            <p class="update-item-text"><strong>New Project:</strong> Pre-opening management for 3
-                                Madinah properties now underway</p>
-                            <span class="update-item-time">2 weeks ago</span>
-                        </div>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-item-icon">&#x1F4CB;</span>
-                        <div class="update-item-body">
-                            <p class="update-item-text"><strong>Hiring:</strong> Senior Consultant &amp; IT Manager
-                                roles open — apply via info@hom.com.sa</p>
-                            <span class="update-item-time">3 weeks ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="update-modal-footer">
-                    <button class="update-dont-show" id="updateDontShow">Don't show again</button>
-                    <a href="#about" class="update-modal-cta" id="updateCTA">View All Updates &#x2192;</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Live Activity Toast -->
-    <div class="live-toast-container" id="liveToastContainer">
-        <div class="live-toast" id="liveToast">
-            <div class="lt-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            </div>
-            <div class="lt-content">
-                <div class="lt-title" id="ltTitle">Someone from Riyadh</div>
-                <div class="lt-desc" id="ltDesc">just downloaded the Company Profile</div>
-                <div class="lt-time" id="ltTime">Just now</div>
-            </div>
-            <button class="lt-close" id="ltClose">&times;</button>
-        </div>
-    </div>
 
     <script src="main.js"></script>
 </body>

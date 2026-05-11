@@ -18,15 +18,12 @@ const isMobile = () => window.innerWidth <= 768;
    PAGE LOAD — Instant hero entrance (no loader)
 ══════════════════════════════════════════════ */
 function initPageLoad() {
-  // Fire banner layers right away
   ScrollTrigger.refresh();
-  initBannerLayers();
 
   // Quick staggered entrance — runs immediately
   gsap.timeline({ delay: 0.15 })
     .from('.nav-brand',    { opacity: 0, y: -10, duration: 0.4, ease: 'power2.out' })
     .from('.nav-links li', { opacity: 0, y: -8, stagger: 0.05, duration: 0.35, ease: 'power2.out' }, '-=0.3')
-    .from('.ann-bar',      { opacity: 0, duration: 0.3 }, '-=0.3')
     .from('.hero-slide-content[data-slide="0"] .hero-badge',   { opacity: 0, y: 22, duration: 0.5, ease: 'power3.out' }, '-=0.1')
     .from('.hero-slide-content[data-slide="0"] .hero-title',   { opacity: 0, y: 32, duration: 0.65, ease: 'power3.out' }, '-=0.35')
     .from('.hero-slide-content[data-slide="0"] .hero-sub',     { opacity: 0, y: 18, duration: 0.5, ease: 'power3.out' }, '-=0.4')
@@ -373,66 +370,6 @@ function initHorizontalScroll() {
 }
 
 /* ══════════════════════════════════════════════
-   LIVE ACTIVITY NOTIFICATIONS
-══════════════════════════════════════════════ */
-function initLiveToasts() {
-    const toast = document.getElementById('liveToast');
-    const closeBtn = document.getElementById('ltClose');
-    const titleEl = document.getElementById('ltTitle');
-    const descEl = document.getElementById('ltDesc');
-    const timeEl = document.getElementById('ltTime');
-    if (!toast) return;
-
-    const isRTL = document.documentElement.dir === 'rtl';
-
-    const citiesEn = ['Riyadh', 'Jeddah', 'Dubai', 'Madinah', 'Makkah', 'Dammam', 'Doha', 'Manama', 'Kuwait City'];
-    const actionsEn = ['just downloaded the Company Profile', 'booked a free consultation', 'is viewing Feasibility Studies', 'requested a call back', 'is reading about Pre-Opening Services', 'is exploring Brand Development'];
-    const timesEn = ['Just now', '1 min ago', '2 mins ago', '4 mins ago'];
-
-    const citiesAr = ['الرياض', 'جدة', 'دبي', 'المدينة المنورة', 'مكة المكرمة', 'الدمام', 'الدوحة', 'المنامة', 'مدينة الكويت'];
-    const actionsAr = ['قام بتحميل الملف التعريفي للشركة', 'حجز استشارة مجانية', 'يتصفح دراسات الجدوى', 'طلب مكالمة هاتفية', 'يقرأ عن خدمات ما قبل الافتتاح', 'يستكشف تطوير العلامة التجارية'];
-    const timesAr = ['الآن', 'قبل دقيقة', 'قبل دقيقتين', 'قبل ٤ دقائق'];
-
-    const cities = isRTL ? citiesAr : citiesEn;
-    const actions = isRTL ? actionsAr : actionsEn;
-    const times = isRTL ? timesAr : timesEn;
-    
-    const someoneStr = isRTL ? 'مستثمر من ' : 'Someone from ';
-
-    let toastInterval;
-
-    function showRandomToast() {
-        if (toast.classList.contains('show')) return;
-
-        const randomCity = cities[Math.floor(Math.random() * cities.length)];
-        const randomAction = actions[Math.floor(Math.random() * actions.length)];
-        const randomTime = times[Math.floor(Math.random() * times.length)];
-
-        titleEl.textContent = someoneStr + randomCity;
-        descEl.textContent = randomAction;
-        timeEl.textContent = randomTime;
-
-        toast.classList.add('show');
-
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, 6000); // Hide after 6 seconds
-    }
-
-    if(closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            toast.classList.remove('show');
-        });
-    }
-
-    // Start random toasts
-    setTimeout(() => {
-        showRandomToast();
-        toastInterval = setInterval(showRandomToast, 22000); // Show every 22 seconds
-    }, 4000); // Initial delay
-}
-
-/* ══════════════════════════════════════════════
    NAVBAR SCROLL + HAMBURGER
 ══════════════════════════════════════════════ */
 function initNavbar() {
@@ -543,8 +480,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMagneticButtons();
   initCounters();
   initHorizontalScroll();
-  initLiveToasts();
-
 });
 
 /* ══════════════════════════════════════════════
@@ -564,91 +499,6 @@ document.getElementById('contactForm')?.addEventListener('submit', function(e) {
     document.getElementById('cf-success').style.display = 'block';
   }, 1800);
 });
-
-/* ══════════════════════════════════════════════
-   BANNER LAYERS — Ticker Bar & Update Modal
-   (both fire after loader completes)
-══════════════════════════════════════════════ */
-function initBannerLayers() {
-
-  /* ── LAYER 1: Ticker Announcement Bar ── */
-  const annBar      = document.getElementById('annBar');
-  const annBarClose = document.getElementById('annBarClose');
-  const navbar      = document.getElementById('navbar');
-  const isMob       = window.innerWidth <= 768;
-  const barH        = isMob ? '34px' : '38px';
-
-  // Don't show if closed this session
-  if (sessionStorage.getItem('annBarClosed')) {
-    annBar.style.display = 'none';
-    navbar.style.top = '0';
-  } else {
-    // Slide down 400ms after loader hides
-    setTimeout(() => {
-      annBar.classList.add('visible');
-      navbar.style.top = barH;
-      document.body.classList.add('ann-bar-open');
-    }, 400);
-  }
-
-  annBarClose.addEventListener('click', () => {
-    annBar.style.transform = 'translateY(-100%)';
-    annBar.style.transition = 'transform 0.4s ease';
-    navbar.style.top = '0px';
-    navbar.style.transition = 'top 0.4s ease';
-    document.body.classList.remove('ann-bar-open');
-    sessionStorage.setItem('annBarClosed', '1');
-  });
-
-  /* ── LAYER 2: Update Popup Modal ── */
-  const updateOverlay  = document.getElementById('updateOverlay');
-  const updateModalX   = document.getElementById('updateModalClose');
-  const updateDontShow = document.getElementById('updateDontShow');
-  const updateCTA      = document.getElementById('updateCTA');
-
-  function openUpdateModal() {
-    updateOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeUpdateModal() {
-    updateOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  // Show modal 1200ms after loader ends — only if not dismissed
-  if (!localStorage.getItem('homUpdateModalDismissed')) {
-    setTimeout(openUpdateModal, 1200);
-  }
-
-  // Close on ✕ button
-  updateModalX?.addEventListener('click', closeUpdateModal);
-
-  // Close on overlay background click
-  updateOverlay?.addEventListener('click', (e) => {
-    if (e.target === updateOverlay) closeUpdateModal();
-  });
-
-  // Close on ESC key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeUpdateModal();
-  });
-
-  // "Don't show again" — persists to localStorage across visits
-  updateDontShow?.addEventListener('click', () => {
-    localStorage.setItem('homUpdateModalDismissed', '1');
-    closeUpdateModal();
-  });
-
-  // CTA: close modal then smooth-scroll to #about
-  updateCTA?.addEventListener('click', (e) => {
-    e.preventDefault();
-    closeUpdateModal();
-    setTimeout(() => {
-      document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
-    }, 300);
-  });
-}
 
 /* ══════════════════════════════════════════════
    PRESENCE SECTION — Starfield + Radar Canvases
